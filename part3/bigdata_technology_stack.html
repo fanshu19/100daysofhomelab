@@ -1,0 +1,1180 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>纷繁复杂的大数据技术栈清单 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="how_to_choose_bi_system.html" />
+    
+
+    </head>
+    <body>
+         
+<div class="donate-modal modal">
+  <div class="modal-header">
+    <div>
+      <span>
+        <img
+          id="modal-avatar"
+          class="modal-avatar"
+          src=""
+        />
+      </span>
+      <span id="nickname">  </span>
+      <p class="modal-close close" onclick="closeDonateModal()">×</p>
+    </div>
+    <div class="message">
+      <div class="tip">
+        <i></i>
+        <span>随意打赏</span>
+      </div>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-pay-way">
+      <div id="wxpay" onclick="showDonateImg(0)">
+        <input
+          type="radio"
+          name="pay-way"
+          value="wxpay"
+          class="zs-type"
+          checked="checked"
+        />
+        <span>
+          <img
+            id="wxpay-logo"
+            src="data:image/png;base64,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"
+          />
+        </span>
+      </div>
+      <div id="alipay" onclick="showDonateImg(1)">
+        <input type="radio" name="pay-way" value="alipay" class="zs-type" />
+        <span>
+          <img
+            id="alipay-logo"
+            src="data:image/png;base64,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"
+          />
+        </span>
+      </div>
+    </div>
+    <div class="modal-pay-qrcode">
+      <img id="wxpay-code" src="static/image/wechat_pay.jpg" />
+      <img
+        id="alipay-code"
+        src="static/image/alipay.jpg"
+        hidden
+      />
+    </div>
+  </div>
+</div>
+<div class="mask"></div>
+
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part I</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    [Homelab网络]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../part1/homelab_network_framework.html">
+            
+                <a href="../part1/homelab_network_framework.html">
+            
+                    
+                    网络架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../part1/how_to_choose_nas_system.html">
+            
+                <a href="../part1/how_to_choose_nas_system.html">
+            
+                    
+                    NAS选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part II</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    [NAS应用]
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part III</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    [BigData大数据]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    [系统选型和环境部署]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="install_cdh.html">
+            
+                <a href="install_cdh.html">
+            
+                    
+                    CDH大数据环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="cdh_deploy_flink.html">
+            
+                <a href="cdh_deploy_flink.html">
+            
+                    
+                    CDH6.2.1部署flink 1.13
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="cdh_deploy_trino.html">
+            
+                <a href="cdh_deploy_trino.html">
+            
+                    
+                    CDH集成Trino (presto)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    [整体架构]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="how_to_build_bigdata_analysis_platform.html">
+            
+                <a href="how_to_build_bigdata_analysis_platform.html">
+            
+                    
+                    如何整合复杂技术打造数据分析平台？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="how_to_choose_bi_system.html">
+            
+                <a href="how_to_choose_bi_system.html">
+            
+                    
+                    BI系统选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.2.3" data-path="bigdata_technology_stack.html">
+            
+                <a href="bigdata_technology_stack.html">
+            
+                    
+                    纷繁复杂的大数据技术栈清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" >
+            
+                <span>
+            
+                    
+                    [数据仓库]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="hive_default_fileformat.html">
+            
+                <a href="hive_default_fileformat.html">
+            
+                    
+                    hive默认建表存储格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >纷繁复杂的大数据技术栈清单</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="&#x7EB7;&#x7E41;&#x590D;&#x6742;&#x7684;&#x5927;&#x6570;&#x636E;&#x6280;&#x672F;&#x6808;&#x6E05;&#x5355;">&#x7EB7;&#x7E41;&#x590D;&#x6742;&#x7684;&#x5927;&#x6570;&#x636E;&#x6280;&#x672F;&#x6808;&#x6E05;&#x5355;</h1>
+<h3 id="&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;">&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h3>
+<ul>
+<li>MySQL &#x4E16;&#x754C;&#x4E0A;&#x6700;&#x6D41;&#x884C;&#x7684;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>PostgreSQL &#x4E16;&#x754C;&#x4E0A;&#x6700;&#x5148;&#x8FDB;&#x7684;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Oracle Database - &#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Teradata - &#x9AD8;&#x6027;&#x80FD; MPP &#x6570;&#x636E;&#x4ED3;&#x5E93;&#x5E73;&#x53F0;&#x3002;</li>
+</ul>
+<h3 id="&#x6846;&#x67B6;">&#x6846;&#x67B6;</h3>
+<ul>
+<li>Bistro - &#x7528;&#x4E8E;&#x6279;&#x5904;&#x7406;&#x548C;&#x6D41;&#x5206;&#x6790;&#x7684;&#x901A;&#x7528;&#x6570;&#x636E;&#x5904;&#x7406;&#x5F15;&#x64CE;&#x3002;&#x5B83;&#x57FA;&#x4E8E;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x8BE5;&#x6A21;&#x578B;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x6765;&#x8868;&#x793A;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x5217;&#x64CD;&#x4F5C;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x4F7F;&#x7528; MapReduce &#x6216; SQL &#x7B49;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x6765;&#x8BBE;&#x7F6E;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>IBM Streams - &#x5206;&#x5E03;&#x5F0F;&#x5904;&#x7406;&#x548C;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;&#x53EF;&#x4EE5;&#x548C;&#x5927;&#x6570;&#x636E;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x6D41;&#x884C;&#x6280;&#x672F; (Kafka&#x3001;HDFS&#x3001;Spark&#x7B49;) &#x96C6;&#x6210;</li>
+<li>Apache Hadoop -&#x5206;&#x5E03;&#x5F0F;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;&#x96C6;&#x6210;&#x4E86; MapReduce(&#x5E76;&#x884C;&#x5904;&#x7406;)&#x3001;YARN(&#x4F5C;&#x4E1A;&#x8C03;&#x5EA6;)&#x548C;HDFS(&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;)&#x3002;</li>
+<li>Tigon - &#x9AD8;&#x541E;&#x5410;&#x7684;&#x5B9E;&#x65F6;&#x6D41;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Pachyderm - Pachyderm &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Docker &#x548C; Kubernetes &#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5E73;&#x53F0;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x5206;&#x6790;&#x573A;&#x666F;&#x3002;</li>
+<li>Polyaxon - &#x4E00;&#x4E2A;&#x53EF;&#x590D;&#x5236;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5E73;&#x53F0;&#x3002;</li>
+</ul>
+<h3 id="&#x5206;&#x5E03;&#x5F0F;&#x7F16;&#x7A0B;">&#x5206;&#x5E03;&#x5F0F;&#x7F16;&#x7A0B;</h3>
+<ul>
+<li>AddThis Hydra - &#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x6700;&#x521D;&#x7531; AddThis &#x5F00;&#x53D1;&#x3002;</li>
+<li>AMPLab SIMR - &#x5728; Hadoop MapReduce v1 &#x4E0A;&#x8FD0;&#x884C; Spark&#x3002;</li>
+<li>Apache APEX - &#x7528;&#x4E8E;&#x5927;&#x6570;&#x636E;&#x6D41;&#x548C;&#x6279;&#x5904;&#x7406;&#x7684;&#x7EDF;&#x4E00;&#x4F01;&#x4E1A;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Apache Beam - &#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x548C;&#x6267;&#x884C;&#x6570;&#x636E;&#x5904;&#x7406;&#x5DE5;&#x4F5C;&#x6D41;&#x7684;&#x7EDF;&#x4E00;&#x6A21;&#x578B;&#x548C;&#x4E00;&#x7EC4;&#x7279;&#x5B9A;&#x4E8E;&#x8BED;&#x8A00;&#x7684;sdk&#x3002;</li>
+<li>Apache Crunch - &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;Java API&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406; Join &#x548C;&#x6570;&#x636E;&#x805A;&#x5408;&#x4E4B;&#x7C7B;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x5728;&#x666E;&#x901A; MapReduce &#x4E0A;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x5F88;&#x7E41;&#x7410;&#x3002;</li>
+<li>Apache DataFu - &#x7531; LinkedIn &#x4E3A; Hadoop &#x548C; Pig &#x5F00;&#x53D1;&#x7684;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x96C6;&#x5408;&#x3002;</li>
+<li>Apache Flink - &#x5206;&#x5E03;&#x5F0F;&#x5904;&#x7406;&#x5F15;&#x64CE;&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x65E0;&#x754C;&#x548C;&#x6709;&#x754C;&#x6570;&#x636E;&#x6D41;&#x4E0A;&#x8FDB;&#x884C;&#x6709;&#x72B6;&#x6001;&#x8BA1;&#x7B97;&#x3002;</li>
+<li>Apache Gearpump -&#x57FA;&#x4E8E; Akka &#x7684;&#x5B9E;&#x65F6;&#x5927;&#x6570;&#x636E;&#x6D41;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Apache Gora - &#x5185;&#x5B58;&#x6570;&#x636E;&#x6A21;&#x578B;&#x548C;&#x6301;&#x4E45;&#x6027;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Hama - BSP(Bulk Synchronous Parallel)&#x8BA1;&#x7B97;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache MapReduce -&#x5728;&#x96C6;&#x7FA4;&#x4E0A;&#x4F7F;&#x7528;&#x5E76;&#x884C;&#x5206;&#x5E03;&#x5F0F;&#x7B97;&#x6CD5;&#x5904;&#x7406;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7F16;&#x7A0B;&#x6A21;&#x578B;&#x3002;</li>
+<li>Apache Pig - &#x7528;&#x4E8E;&#x8868;&#x8FBE; Hadoop &#x6570;&#x636E;&#x5206;&#x6790;&#x7A0B;&#x5E8F;&#x7684;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x3002;</li>
+<li>Apache REEF - &#x7528;&#x6765;&#x7B80;&#x5316;&#x548C;&#x7EDF;&#x4E00;&#x4F4E;&#x5C42;&#x5927;&#x6570;&#x636E;&#x7CFB;&#x7EDF;&#x7684;&#x4FDD;&#x7559;&#x6027;&#x8BC4;&#x4F30;&#x6267;&#x884C;&#x6846;&#x67B6;</li>
+<li>Apache S4 - &#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x7528;&#x9014;&#x7684;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x3001;&#x53EF;&#x4F38;&#x7F29;&#x7684;&#x3001;&#x5BB9;&#x9519;&#x7684;&#x3001;&#x53EF;&#x63D2;&#x5165;&#x5F0F;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x636E;&#x6D41;</li>
+<li>Apache Spark - &#x5FEB;&#x901F;&#x3001;&#x901A;&#x7528;&#x7684;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x5904;&#x7406;&#x5F15;&#x64CE;</li>
+<li>Apache Spark Streaming - &#x5B9E;&#x65F6;&#x6D41;&#x5904;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x5C5E;&#x4E8E; Spark &#x7684;&#x4E00;&#x90E8;&#x5206;.</li>
+<li>Apache Storm - Twitter &#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x53EF;&#x5728; YARN &#x4E0A;&#x8FDB;&#x884C;&#x6D41;&#x5904;&#x7406;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Samza -&#x57FA;&#x4E8E; Kafka &#x548C; YARN &#x7684;&#x6D41;&#x5904;&#x7406;&#x7684;&#x6846;&#x67B6;</li>
+<li>Apache Tez - &#x57FA;&#x4E8E; YARN &#x7684;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x590D;&#x6742; DAG (&#x6709;&#x5411;&#x65E0;&#x73AF;&#x56FE;)&#x4EFB;&#x52A1;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Twill - YARN &#x4E0A;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x5F00;&#x53D1;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x590D;&#x6742;&#x6027;&#x3002;</li>
+<li>Baidu Bigflow - &#x4E00;&#x4E2A;&#x5141;&#x8BB8;&#x7F16;&#x5199;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x7B80;&#x5355;&#x3001;&#x7075;&#x6D3B;&#x3001;&#x5F3A;&#x5927;&#x7684; API &#x6765;&#x8F7B;&#x677E;&#x5904;&#x7406;&#x4EFB;&#x4F55;&#x89C4;&#x6A21;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>Cascalog - &#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x67E5;&#x8BE2;&#x5E93;&#x3002;</li>
+<li>Cheetah - MapReduce &#x4E4B;&#x4E0A;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x3002;</li>
+<li>Concurrent Cascading - Hadoop &#x4E0A;&#x7684;&#x6570;&#x636E;&#x7BA1;&#x7406;/&#x5206;&#x6790;&#x6846;&#x67B6;&#x3002;</li>
+<li>Damballa Parkour - &#x4E3A; Clojure &#x5F00;&#x53D1;&#x7684; MapReduce &#x5E93;&#x3002;</li>
+<li>Datasalt Pangool - &#x53EF;&#x66FF;&#x4EE3; MapReduce &#x8303;&#x5F0F;.</li>
+<li>DataTorrent StrAM -&#x5B9E;&#x65F6;&#x8BA1;&#x7B97;&#x5F15;&#x64CE;&#xFF0C;&#x65E8;&#x5728;&#x4EE5;&#x4E00;&#x79CD;&#x5C3D;&#x53EF;&#x80FD;&#x7545;&#x901A;&#x7684;&#x65B9;&#x5F0F;&#x652F;&#x6301;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x5F02;&#x6B65;&#x3001;&#x5B9E;&#x65F6;&#x7684;&#x5185;&#x5B58;&#x5927;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#xFF0C;&#x540C;&#x65F6;&#x6700;&#x5C0F;&#x5316;&#x5F00;&#x9500;&#x548C;&#x5BF9;&#x6027;&#x80FD;&#x7684;&#x5F71;&#x54CD;&#x3002;</li>
+<li>Facebook Corona - Hadoop &#x7684;&#x589E;&#x5F3A;&#xFF0C;&#x53EF;&#x4EE5;&#x6D88;&#x9664;&#x5355;&#x70B9;&#x6545;&#x969C;&#x3002;</li>
+<li>Facebook Peregrine - Map Reduce &#x6846;&#x67B6;.</li>
+<li>Facebook Scuba - &#x5206;&#x5E03;&#x5F0F;&#x5185;&#x5B58;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
+<li>Google Dataflow - &#x521B;&#x5EFA;&#x6570;&#x636E;&#x7BA1;&#x9053;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x6444;&#x53D6;&#x3001;&#x8F6C;&#x6362;&#x548C;&#x5206;&#x6790;&#x6570;&#x636E;&#x3002;</li>
+<li>Google MapReduce - map reduce &#x6846;&#x67B6;.</li>
+<li>Google MillWheel - &#x5BB9;&#x9519;&#x6D41;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>IBM Streams - &#x7528;&#x4E8E;&#x5206;&#x5E03;&#x5F0F;&#x5904;&#x7406;&#x548C;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x7684;&#x5E73;&#x53F0;&#x3002; &#x63D0;&#x4F9B;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x9AD8;&#x7EA7;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x5982;&#x5730;&#x7406;&#x7A7A;&#x95F4;&#xFF0C;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7B49;&#x3002;</li>
+<li>JAQL - &#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x7ED3;&#x6784;&#x5316;&#x3001;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x548C;&#x975E;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x3002;</li>
+<li>Kite - &#x4E00;&#x7EC4;&#x5E93;&#x3001;&#x5DE5;&#x5177;&#x3001;&#x793A;&#x4F8B;&#x548C;&#x6587;&#x6863;&#xFF0C;&#x91CD;&#x70B9;&#x5728;&#x4E8E;&#x7B80;&#x5316;&#x5728; Hadoop &#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0A;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>Metamarkets Druid - &#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Netflix PigPen - &#x662F; Clojure &#x8BED;&#x97F3;&#x7684; Map-Reduce&#xFF0C;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;&#x5230; Apache Pig &#x6216;&#x8005; Cascading &#x4E2D;</li>
+<li>Nokia Disco - &#x8BFA;&#x57FA;&#x4E9A;&#x5F00;&#x53D1;&#x7684; MapReduce &#x6846;&#x67B6;&#x3002;</li>
+<li>Onyx - &#x4E91;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x3002;</li>
+<li>Pinterest Pinlater - &#x5F02;&#x6B65;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Pydoop - &#x7528; Python &#x7F16;&#x5199;&#xFF0C;&#x5E76;&#x91C7;&#x7528; MapReduce &#x548C; HDFS &#x6280;&#x672F;&#x5BF9; Hadoop &#x8FDB;&#x884C;&#x6269;&#x5C55;&#x7684; API&#x3002;</li>
+<li>Ray - &#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x548C;&#x8FD0;&#x884C;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5FEB;&#x901F;&#x800C;&#x7B80;&#x5355;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Rackerlabs Blueflood - &#x591A;&#x79DF;&#x6237;&#x5206;&#x5E03;&#x5F0F;&#x5EA6;&#x91CF;&#x5904;&#x7406;&#x7CFB;&#x7EDF;</li>
+<li>Skale - NodeJS &#x4E0A;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Stratosphere - &#x901A;&#x7528;&#x96C6;&#x7FA4;&#x8BA1;&#x7B97;&#x6846;&#x67B6;&#x3002;</li>
+<li>Streamdrill - streamdrill &#x5728;&#x8BA1;&#x7B97;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x4E0A;&#x7684;&#x4E8B;&#x4EF6;&#x6D41;&#x6D3B;&#x52A8;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x5E76;&#x627E;&#x51FA;&#x6700;&#x6D3B;&#x8DC3;&#x7684;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x3002;</li>
+<li>streamsx.topology - &#x7528;&#x4E8E;&#x5728; Java&#xFF0C;Python &#x6216; Scala &#x4E2D;&#x6784;&#x5EFA; IBM Streams &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5E93;&#x3002;</li>
+<li>Tuktu - &#x6613;&#x4E8E;&#x4F7F;&#x7528;&#x7684;&#x6279;&#x5904;&#x7406;&#x548C;&#x6D41;&#x5F0F;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Scala&#xFF0C;Akka &#x548C; Play &#x6784;&#x5EFA;&#xFF01;</li>
+<li>Twitter Heron - &#x7531; Twitter &#x5F00;&#x53D1;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x65F6;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x5BB9;&#x9519;&#x7684;&#x6D41;&#x5904;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4EE3;&#x66FF; Storm&#x3002;</li>
+<li>Twitter Scalding - &#x7528;&#x4E8E; Map Reduce &#x4F5C;&#x4E1A;&#x7684; Scala &#x5E93;&#xFF0C;&#x57FA;&#x4E8E; Cascading &#x6784;&#x5EFA;&#x3002;</li>
+<li>Twitter Summingbird - Summingbird &#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x5E93;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x539F;&#x751F; Scala &#x6216; Java &#x96C6;&#x5408;&#x8F6C;&#x6362;&#x7684; MapReduce &#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x5728;&#x8BB8;&#x591A;&#x7740;&#x540D;&#x7684;&#x5206;&#x5E03;&#x5F0F; MapReduce &#x5E73;&#x53F0;&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x5305;&#x62EC; Storm &#x548C; Scalding&#xFF0C;&#x7531; Twitter &#x5F00;&#x53D1;&#x3002;</li>
+<li>Twitter TSAR - Twitter &#x5F00;&#x53D1;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x805A;&#x5408;&#x5668;</li>
+<li>Wallaroo - &#x8D85;&#x5FEB;&#x5F39;&#x6027;&#x6570;&#x636E;&#x5904;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x6709;&#x72B6;&#x6001;&#x3001;&#x5206;&#x6790;&#x3001;&#x6D41;&#x5904;&#x7406;&#x548C;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684; AI &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x6295;&#x5165;&#x751F;&#x4EA7;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x8003;&#x8651;&#x89C4;&#x6A21;&#x3002;&#x5B83;&#x4E3A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x79CD;&#x8BED;&#x8A00;&#x7684; api &#x6765;&#x5B9E;&#x73B0;&#x4ED6;&#x4EEC;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</li>
+</ul>
+<h3 id="&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<ul>
+<li>Ambry - &#x5206;&#x5E03;&#x5F0F;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#xFF0C;&#x652F;&#x6301;&#x5B58;&#x50A8;&#x6570;&#x4E07;&#x4EBF;&#x4E2A;&#x5C0F;&#x7684;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6570;&#x5341;&#x4EBF;&#x4E2A;&#x5927;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>Apache HDFS - &#x63D0;&#x4F9B;&#x5BF9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x7684;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x8BBF;&#x95EE;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache Kudu - Hadoop &#x7684;&#x5B58;&#x50A8;&#x5C42;&#x53EF;&#x5B9E;&#x73B0;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x5FEB;&#x901F;&#x5206;&#x6790;&#x3002;</li>
+<li>BeeGFS - &#x4E4B;&#x524D;&#x79F0;&#x4E3A; FhGFS&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5E76;&#x884C;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Ceph Filesystem - &#x4E00;&#x4E2A;&#x652F;&#x6301;POSIX&#x63A5;&#x53E3;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
+<li>Disco DDFS - &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Facebook Haystack - &#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Google Colossus - &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; (GFS2).</li>
+<li>Google GFS - &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Google Megastore - &#x53EF;&#x6269;&#x5C55;&#x3001;&#x9AD8;&#x53EF;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x3002;</li>
+<li>GridGain - GGFS, Hadoop &#x517C;&#x5BB9;&#x7684;&#x5185;&#x5B58;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Lustre file system - &#x9AD8;&#x6027;&#x80FD;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Microsoft Azure Data Lake Store - Azure &#x4E0A;&#x517C;&#x5BB9; HDFS &#x7684;&#x5B58;&#x50A8;</li>
+<li>Quantcast File System QFS - &#x5F00;&#x6E90;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Red Hat GlusterFS - &#x6A2A;&#x5411;&#x6269;&#x5C55;&#x7F51;&#x7EDC;&#x9644;&#x52A0;&#x7684;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Seaweed-FS -&#x7B80;&#x5355;&#x4E14;&#x9AD8;&#x5EA6;&#x53EF;&#x4F38;&#x7F29;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Alluxio - &#x5F00;&#x6E90;&#x7684;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Tahoe-LAFS - &#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x4E91;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Baidu File System - &#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+</ul>
+<h3 id="&#x5206;&#x5E03;&#x5F0F;&#x7D22;&#x5F15;">&#x5206;&#x5E03;&#x5F0F;&#x7D22;&#x5F15;</h3>
+<ul>
+<li>Pilosa &#x5F00;&#x6E90;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x4F4D;&#x56FE;&#x7D22;&#x5F15;&#xFF0C;&#x6781;&#x5927;&#x5730;&#x52A0;&#x901F;&#x4E86;&#x8DE8;&#x591A;&#x4E2A;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x96C6;&#x7684;&#x67E5;&#x8BE2;&#x3002;</li>
+</ul>
+<h3 id="&#x6587;&#x6863;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x6587;&#x6863;&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<ul>
+<li>Actian Versant - &#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5546;&#x4E1A;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Crate Data - &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5927;&#x89C4;&#x6A21;&#x53EF;&#x6269;&#x5C55;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x5B83;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x7BA1;&#x7406;&#x3002;</li>
+<li>Facebook Apollo - Facebook &#x7684;&#x7C7B;&#x4F3C;&#x4E8E; Paxos &#x7684; NoSQL &#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>jumboDB - &#x57FA;&#x4E8E; Hadoop &#x7684;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
+<li>LinkedIn Espresso - &#x53EF;&#x6C34;&#x5E73;&#x6269;&#x5C55;&#x7684;&#x9762;&#x5411;&#x6587;&#x6863; NoSQL &#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
+<li>MarkLogic - &#x6A21;&#x5F0F;&#x65E0;&#x5173;&#x7684;&#x4F01;&#x4E1A; NoSQL &#x6570;&#x636E;&#x5E93;&#x6280;&#x672F;&#x3002;</li>
+<li>Microsoft Azure DocumentDB - NoSQL &#x4E91;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#xFF0C;&#x652F;&#x6301; MongoDB &#x534F;&#x8BAE;</li>
+<li>MongoDB - &#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>RavenDB - &#x652F;&#x6301;&#x4E8B;&#x52A1;&#x7684;&#x5F00;&#x6E90;&#x6587;&#x6863;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>RethinkDB - &#x652F;&#x6301;&#x8868; join &#x548C; group by &#x7B49;&#x67E5;&#x8BE2;&#x7684;&#x6587;&#x6863;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+</ul>
+<h3 id="key-value-&#x6570;&#x636E;&#x6A21;&#x578B;">Key-value &#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<ul>
+<li>Aerospike - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#xFF0C;&#x9AD8;&#x53EF;&#x7528;&#x7684; K-V &#x7C7B;&#x578B;&#x7684; NOSQL &#x6570;&#x636E;&#x5E93;&#x3002;&#x63D0;&#x4F9B;&#x7C7B;&#x4F3C;&#x4F20;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#x7684;ACID&#x64CD;&#x4F5C;&#x3002;</li>
+<li>Amazon DynamoDB - &#x5206;&#x5E03;&#x5F0F; key/value &#x5B58;&#x50A8;, Dynamo &#x8BBA;&#x6587;&#x7684;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>Badger - &#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x5355;&#x3001;&#x9AD8;&#x6548;&#x548C;&#x6301;&#x4E45;&#x7684;&#x952E;&#x503C;&#x5B58;&#x50A8;&#xFF0C;&#x662F;&#x7528; Go &#x7F16;&#x5199;&#x3002;</li>
+<li>Bolt - &#x53EF;&#x5728; Go &#x8BED;&#x8A00;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x952E;&#x503C;&#x6570;&#x636E;&#x5E93;.</li>
+<li>BTDB - .Net &#x4E2D;&#x7684; Key Value &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5305;&#x542B; Object DB Layer, RPC, dynamic IL &#x7B49;&#x7B49;&#x3002;</li>
+<li>BuntDB - Go &#x8BED;&#x8A00;&#x7684;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#xFF0C;&#x53EF;&#x5D4C;&#x5165;&#xFF0C;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x952E;/&#x503C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x7D22;&#x5F15;&#x548C;&#x5730;&#x7406;&#x7A7A;&#x95F4;&#x3002;</li>
+<li>Edis - &#x534F;&#x8BAE;&#x517C;&#x5BB9; Redis &#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x66FF;&#x4EE3; Redis&#x3002;</li>
+<li>ElephantDB - &#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x4ECE; Hadoop &#x5BFC;&#x51FA;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>EventStore - &#x5206;&#x5E03;&#x5F0F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>GridDB - &#x4E00;&#x6B3E;&#x9AD8;&#x5EA6;&#x53EF;&#x6269;&#x5C55;&#x7684; NoSQL &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x7528;&#x4E8E;&#x7269;&#x8054;&#x7F51;&#x548C;&#x5927;&#x6570;&#x636E;&#x9886;&#x57DF;&#xFF0C;&#x8FD8;&#x5177;&#x6709;&#x9AD8;&#x53EF;&#x9760;&#x6027;&#x548C;&#x9AD8;&#x6027;&#x80FD;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x3002;</li>
+<li>HyperDex - &#x53EF;&#x6269;&#x5C55;&#x7684;&#x4E0B;&#x4E00;&#x4EE3;&#x952E;&#x503C;&#x548C;&#x6587;&#x6863;&#x5B58;&#x50A8;&#xFF0C;&#x5177;&#x6709;&#x591A;&#x79CD;&#x529F;&#x80FD;&#xFF0C;&#x5305;&#x62EC;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x5BB9;&#x9519;&#x6027;&#x548C;&#x9AD8;&#x6027;&#x80FD;&#x3002;</li>
+<li>Ignite - &#x5206;&#x5E03;&#x5F0F;&#x5185;&#x5B58;&#x7F51;&#x683C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5177;&#x6709;&#x53EF;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;&#xFF0C;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x7B49;&#x7279;&#x70B9;&#xFF0C;&#x6B64;&#x5916;&#x8FD8;&#x652F;&#x6301;&#x4E30;&#x5BCC;&#x7684;&#x952E;&#x503C;&#x5B58;&#x50A8;&#x4EE5;&#x53CA;SQL&#x8BED;&#x6CD5;&#x3002;</li>
+<li>LinkedIn Krati - &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x5177;&#x6709;&#x975E;&#x5E38;&#x4F4E;&#x7684;&#x5EF6;&#x8FDF;&#x548C;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x3002;</li>
+<li>Linkedin Voldemort - &#x5206;&#x5E03;&#x5F0F; key/value &#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Oracle NoSQL Database - Oracle &#x516C;&#x53F8;&#x5F00;&#x53D1;&#x7684;&#x5206;&#x5E03;&#x5F0F; key/value &#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;.</li>
+<li>Redis -&#x4E00;&#x4E2A;&#x5F00;&#x6E90;(BSD&#x8BB8;&#x53EF;)&#x7684;&#xFF0C;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x3001;&#x7F13;&#x5B58;&#x548C;&#x6D88;&#x606F;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</li>
+<li>Riak - &#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x3002;</li>
+<li>Storehaus -Twitter &#x5F00;&#x53D1;&#x7684;&#x7528;&#x4E8E;&#x5F02;&#x6B65; key/value &#x5B58;&#x50A8;&#x7684;&#x7C7B;&#x5E93;&#x3002;</li>
+<li>SummitDB - &#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684; NoSQL &#x952E;/&#x503C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5177;&#x6709;&#x78C1;&#x76D8;&#x6301;&#x4E45;&#x6027;&#xFF0C;&#x5E76;&#x652F;&#x6301; Raft &#x4E00;&#x81F4;&#x6027;&#x7B97;&#x6CD5;&#x3002;</li>
+<li>Tarantool - &#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7684; NoSQL &#x6570;&#x636E;&#x5E93;&#x548C;&#x4E00;&#x4E2A; Lua &#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>TiKV - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Rust &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x952E;&#x503C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x53D7;&#x8C37;&#x6B4C; Spanner &#x548C; HBase &#x7684;&#x542F;&#x53D1;&#x3002;</li>
+<li>Tile38 - &#x5177;&#x6709;&#x7A7A;&#x95F4;&#x7D22;&#x5F15;&#x548C;&#x5B9E;&#x65F6;&#x5730;&#x7406;&#x56F4;&#x680F;&#x7684;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x3002;&#x652F;&#x6301;&#x5404;&#x79CD;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;&#x7EAC;&#x5EA6;/&#x7ECF;&#x5EA6;&#x70B9;&#xFF0C;&#x8FB9;&#x754C;&#x6846;&#xFF0C;XYZ&#x5207;&#x7247;&#xFF0C;Geohashes&#x548C;GeoJSON</li>
+<li>TreodeDB - key-value &#x5B58;&#x50A8;&#xFF0C;&#x652F;&#x6301;&#x6570;&#x636E;&#x526F;&#x672C;&#x3001;&#x5206;&#x7247;&#x4EE5;&#x53CA;&#x63D0;&#x4F9B;&#x539F;&#x5B50;&#x591A;&#x884C;&#x5199;&#x3002;</li>
+</ul>
+<h3 id="&#x56FE;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x56FE;&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<ul>
+<li>AgensGraph - &#x57FA;&#x4E8E; PostgreSQL &#x7684;&#x65B0;&#x4E00;&#x4EE3;&#x591A;&#x6A21;&#x578B;&#x56FE;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Apache Giraph - &#x4E00;&#x4E2A;&#x53EF;&#x4F38;&#x7F29;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x8FED;&#x4EE3;&#x56FE;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C; &#x57FA;&#x4E8E; Hadoop &#x5E73;&#x53F0;&#xFF0C;&#x7075;&#x611F;&#x6765;&#x81EA; BSP (bulk synchronous parallel) &#x548C; Google &#x7684; Pregel&#x3002;</li>
+<li>Apache Spark Bagel - Bagel &#x662F;&#x8C37;&#x6B4C; Pregel &#x56FE;&#x5904;&#x7406;&#x6846;&#x67B6;&#x7684; Spark &#x5B9E;&#x73B0;&#xFF0C;&#x652F;&#x6301;&#x57FA;&#x672C;&#x7684;&#x56FE;&#x5F62;&#x8BA1;&#x7B97;&#x3001;&#x7EC4;&#x5408;&#x5668;&#xFF08;combiners&#xFF09;&#x548C;&#x805A;&#x5408;&#x5668;&#xFF08;aggregators&#xFF09;&#x3002;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x88AB; GraphX &#x66FF;&#x4EE3;&#xFF0C;&#x5728; Spark 2.0.0 &#x7248;&#x672C;&#x5DF2;&#x7ECF;&#x88AB;&#x79FB;&#x9664;&#x3002;</li>
+<li>ArangoDB - &#x591A;&#x6A21;&#x578B;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>DGraph - &#x4E00;&#x4E2A;&#x53EF;&#x4F38;&#x7F29;&#x7684;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x3001;&#x4F4E;&#x5EF6;&#x8FDF;&#x7684;&#x3001;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x7684;&#x56FE;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x65E8;&#x5728;&#x63D0;&#x4F9B;&#x8C37;&#x6B4C;&#x751F;&#x4EA7;&#x7EA7;&#x522B;&#x7684;&#x89C4;&#x6A21;&#x548C;&#x541E;&#x5410;&#x91CF;&#xFF0C;&#x5177;&#x6709;&#x8DB3;&#x591F;&#x4F4E;&#x7684;&#x5EF6;&#x8FDF;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; TB &#x7EA7;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x4E0A;&#x4E3A;&#x5B9E;&#x65F6;&#x7528;&#x6237;&#x67E5;&#x8BE2;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;</li>
+<li>EliasDB - &#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x57FA;&#x4E8E;&#x56FE;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x3002;</li>
+<li>Facebook TAO - TAO &#x662F; facebook &#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x548C;&#x670D;&#x52A1;&#x793E;&#x4EA4;&#x56FE;&#x3002;</li>
+<li>GCHQ Gaffer - Gaffer &#x662F; GCHQ&#xFF08;&#x82F1;&#x56FD;&#x653F;&#x5E9C;&#x901A;&#x8BAF;&#x603B;&#x90E8;&#xFF09;&#x4E8E;2015&#x5E74;12&#x6708;14&#x65E5;&#x5728; GitHub &#x4E0A;&#x516C;&#x5E03;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;Gaffer &#x662F;&#x4E2A;&#x5927;&#x89C4;&#x6A21;&#x56FE;&#x5F62;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5B58;&#x50A8;&#x5927;&#x89C4;&#x6A21;&#x56FE;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x8282;&#x70B9;&#x548C;&#x8FB9;&#x754C;&#x6709;&#x6570;&#x636E;&#x7EDF;&#x8BA1;&#xFF0C;&#x6BD4;&#x5982;&#x8BA1;&#x6570;&#xFF0C;&#x76F4;&#x65B9;&#x56FE;&#x548C;&#x8349;&#x56FE;&#x3002;&#x8FD9;&#x4E9B;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x662F;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x7684;&#x8282;&#x70B9;&#x548C;&#x8FB9;&#x754C;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x52A8;&#x6001;&#x66F4;&#x65B0;&#x3002;</li>
+<li>Google Cayley - &#x5F00;&#x6E90;&#x7684;&#x56FE;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Google Pregel - &#x56FE;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>GraphLab PowerGraph - &#x5305;&#x542B; C++ &#x5B9E;&#x73B0;&#x7684; GraphLab API&#x4EE5;&#x53CA;&#x4E00;&#x7EC4;&#x57FA;&#x4E8E;GraphLab API &#x6784;&#x5EFA;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x6570;&#x636E;&#x6316;&#x6398;&#x5DE5;&#x5177;&#x5305;&#x3002;</li>
+<li>GraphX - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x56FE;&#x5904;&#x7406;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x662F;&#x57FA;&#x4E8E; Spark &#x5E73;&#x53F0;&#x63D0;&#x4F9B;&#x5BF9;&#x56FE;&#x8BA1;&#x7B97;&#x548C;&#x56FE;&#x6316;&#x6398;&#x7B80;&#x6D01;&#x6613;&#x7528;&#x7684;&#x800C;&#x4E30;&#x5BCC;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6781;&#x5927;&#x7684;&#x65B9;&#x4FBF;&#x4E86;&#x5BF9;&#x5206;&#x5E03;&#x5F0F;&#x56FE;&#x5904;&#x7406;&#x7684;&#x9700;&#x6C42;&#x3002;</li>
+<li>Gremlin - &#x56FE;&#x904D;&#x5386;&#x8BED;&#x8A00;&#x3002;</li>
+<li>Infovore - &#x4E00;&#x4E2A; map/reduce &#x6846;&#x67B6;&#xFF0C;&#x7528;&#x6765;&#x5904;&#x7406;&#x5927;&#x91CF;&#x7684; RDF &#x6570;&#x636E;&#x96C6;&#xFF0C;&#x6CE8;&#x5165; Freebase &#x548C; DBpedia&#xFF0C;&#x57FA;&#x4E8E; Hadoop &#x6784;&#x5EFA;&#x3002;</li>
+<li>Intel GraphBuilder - &#x57FA;&#x4E8E; Hadoop &#x6784;&#x9020;&#x7684;&#x5927;&#x578B;&#x56FE;&#x5DE5;&#x5177;&#x3002;</li>
+<li>JanusGraph - &#x5F00;&#x6E90;&#x5206;&#x5E03;&#x5F0F;&#x56FE;&#x5F62;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x540E;&#x7AEF;&#x5B58;&#x50A8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x591A;&#x79CD;&#x7EC4;&#x4EF6;&#x5305;&#x62EC; Bigtable&#x3001;HBase&#x3001;Cassandra&#x7B49;&#xFF0C;&#x540C;&#x65F6;&#x7D22;&#x5F15;&#x540E;&#x7AEF;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x5305;&#x62EC; Elasticsearch&#x3001;Solr&#x3001;Lucene &#x7B49;&#x3002;</li>
+<li>MapGraph - &#x4E00;&#x4E2A;&#x9AD8;&#x7EA7;&#x7684; API &#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x5F00;&#x53D1;&#x57FA;&#x4E8E; GPU &#x7684;&#x9AD8;&#x6027;&#x80FD;&#x56FE;&#x5F62;&#x5206;&#x6790;&#x5E94;&#x7528;&#x3002;</li>
+<li>Microsoft Graph Engine - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5927;&#x89C4;&#x6A21;&#x56FE;&#x6570;&#x636E;&#x5904;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x66F4;&#x65B9;&#x4FBF;&#x5730;&#x6784;&#x5EFA;&#x5B9E;&#x65F6;&#x67E5;&#x8BE2;&#x5E94;&#x7528;&#x548C;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#x79BB;&#x7EBF;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x5B83;&#x5728;&#x5B66;&#x672F;&#x754C;&#x66F4;&#x5E7F;&#x4E3A;&#x4EBA;&#x4E4B;&#x7684;&#x540D;&#x79F0;&#x662F; Trinity&#x3002;</li>
+<li>Neo4j - &#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x7684; NOSQL&#x56FE;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B8C;&#x5168;&#x7531; Java &#x5B9E;&#x73B0;&#x3002;</li>
+<li>OrientDB - &#x6587;&#x6863;&#x56FE;&#x5F62;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Phoebus - &#x5927;&#x578B;&#x56FE;&#x5904;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Titan - &#x5EFA;&#x7ACB;&#x5728; Cassandra &#x4E4B;&#x4E0A;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x56FE;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Twitter FlockDB - &#x5206;&#x5E03;&#x5F0F;&#x56FE;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>NodeXL - Microsoft&#xAE; Excel&#xAE; 2007, 2010, 2013 and 2016 &#x514D;&#x8D39;&#x5F00;&#x6E90;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x63A2;&#x7D22;&#x7F51;&#x7EDC;&#x56FE;&#x3002;</li>
+</ul>
+<h3 id="&#x5217;&#x5F0F;&#x6570;&#x636E;&#x5E93;">&#x5217;&#x5F0F;&#x6570;&#x636E;&#x5E93;</h3>
+<p>&#x6CE8;&#x610F; &#x8BF7;&#x8BFB;&#x4E00;&#x4E0B; Key-Map Data Model &#x7AE0;&#x8282;&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
+<ul>
+<li>Columnar Storage - &#x89E3;&#x91CA;&#x4EC0;&#x4E48;&#x662F;&#x5217;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5B83;&#x3002;</li>
+<li>Actian Vector - &#x9762;&#x5411;&#x5217;&#x7684;&#x5206;&#x6790;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>C-Store - &#x9762;&#x5411;&#x5217;&#x7684; DBMS.</li>
+<li>ClickHouse - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5217;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#xFF08;DBMS&#xFF09;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5728;&#x7EBF;&#x5206;&#x6790;&#x5904;&#x7406;&#x67E5;&#x8BE2;&#xFF08;OLAP&#xFF09;&#x3002;</li>
+<li>EventQL - &#x4E3A;&#x5927;&#x89C4;&#x6A21;&#x4E8B;&#x4EF6;&#x6536;&#x96C6;&#x548C;&#x5206;&#x6790;&#x800C;&#x6784;&#x5EFA;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x9762;&#x5411;&#x5217;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>MonetDB - &#x5217;&#x5F0F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Parquet - &#x7075;&#x611F;&#x6765;&#x81EA;&#x4E8E;2010&#x5E74; Google &#x53D1;&#x8868;&#x7684; Dremel &#x8BBA;&#x6587;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5217;&#x5F0F;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x4E0E;&#x8BED;&#x8A00;&#x3001;&#x5E73;&#x53F0;&#x65E0;&#x5173;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x548C;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x5904;&#x7406;&#x6846;&#x67B6;&#x7ED1;&#x5B9A;&#x3002;</li>
+<li>Pivotal Greenplum - &#x4E3A;&#x7279;&#x5B9A;&#x76EE;&#x7684;&#x800C;&#x6784;&#x5EFA;&#x7684;&#x4E13;&#x7528;&#x5206;&#x6790;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5217;&#x5F0F;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x548C;&#x4E00;&#x4E2A;&#x4F20;&#x7EDF;&#x7684;&#x57FA;&#x4E8E;&#x884C;&#x7684;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Vertica - &#x8BBE;&#x8BA1;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x5927;&#x91CF;&#x5FEB;&#x901F;&#x589E;&#x957F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4F9B;&#x975E;&#x5E38;&#x5FEB;&#x7684;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x3002;</li>
+<li>SQream DB - &#x4EE5;&#x8272;&#x5217;&#x5927;&#x6570;&#x636E;&#x516C;&#x53F8;&#x5F00;&#x53D1;&#x7684;&#x8DD1;&#x5728; GPU &#x4E0A;&#x7684;&#x5927;&#x6570;&#x636E;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8BBE;&#x8BA1;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x548C;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#xFF0C;&#x4F7F;&#x7528; ANSI-92 SQL&#xFF0C;&#x9002;&#x7528;&#x4E8E;10TB&#x5230;1PB&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;</li>
+<li>Google BigQuery - Google &#x63A8;&#x51FA;&#x7684;&#x4E00;&#x9879; Web &#x670D;&#x52A1;&#xFF0C;&#x8BE5;&#x670D;&#x52A1;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Google &#x7684;&#x67B6;&#x6784;&#x6765;&#x8FD0;&#x884C; SQL &#x8BED;&#x53E5;&#x5BF9;&#x8D85;&#x7EA7;&#x5927;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>Amazon Redshift - &#x4E00;&#x4E2A;&#x652F;&#x6301; SQL &#x67E5;&#x8BE2;&#x7684;&#x3001;&#x5FEB;&#x901F;&#x3001;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x5217;&#x5F0F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B83;&#x652F;&#x6301; PB &#x7EA7;&#x7684;&#x6570;&#x91CF;&#x67E5;&#x8BE2;&#xFF0C;&#x662F;&#x9002;&#x7528;&#x4E8E;&#x4F01;&#x4E1A;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x3002;</li>
+<li>IndexR - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5927;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x4E8E; 2017 &#x5E74; 1 &#x6708;&#x521D;&#x6B63;&#x5F0F;&#x5F00;&#x6E90;&#xFF0C;&#x65E8;&#x5728;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x7D22;&#x5F15;&#x3001;&#x4F18;&#x5316;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3001;&#x63D0;&#x9AD8; IO &#x6548;&#x7387;&#x7B49;&#x5404;&#x79CD;&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x6765;&#x63D0;&#x9AD8;&#x8BA1;&#x7B97;&#x5C42;&#x548C;&#x5B58;&#x50A8;&#x5C42;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x6548;&#x7387;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x5347;&#x6574;&#x4F53;&#x6027;&#x80FD;&#x3002;</li>
+<li>LocustDB - &#x4E00;&#x4E2A;&#x5927;&#x89C4;&#x6A21;&#x5E76;&#x884C;&#x4E14;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x5206;&#x6790;&#x6570;&#x636E;&#x5E93; (analytics database)&#xFF0C;&#x53EF;&#x5FEB;&#x901F;&#x5904;&#x7406;&#x4F60;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x76EE;&#x524D;&#x5904;&#x4E8E;&#x5B9E;&#x9A8C;&#x6027;&#x9636;&#x6BB5;&#x3002;</li>
+</ul>
+<h3 id="newsql-&#x6570;&#x636E;&#x5E93;">NewSQL &#x6570;&#x636E;&#x5E93;</h3>
+<ul>
+<li>Actian Ingres - &#x5546;&#x4E1A;&#x652F;&#x6301;&#xFF0C;&#x5F00;&#x6E90; SQL &#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>ActorDB - &#x5206;&#x5E03;&#x5F0F;&#x7684; SQL &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x53EF;&#x4F38;&#x7F29;&#x7684; K/V &#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x3002;ActorDB &#x57FA;&#x4E8E; Actor &#x8BA1;&#x7B97;&#x6A21;&#x578B;&#xFF0C;&#x4E0E;&#x4F20;&#x7EDF;&#x7684;&#x96C6;&#x4E2D;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x540C;&#xFF0C;ActorDB &#x7531;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x88AB;&#x6210;&#x4E3A; actor &#x7684;&#x72EC;&#x7ACB;&#x548C;&#x5E76;&#x53D1; SQL &#x6570;&#x636E;&#x5E93;&#x7EC4;&#x6210;&#x3002;</li>
+<li>Amazon RedShift -&#x57FA;&#x4E8E; PostgreSQL &#x7684;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x670D;&#x52A1;&#x3002;</li>
+<li>BayesDB - &#x4E00;&#x4E2A;&#x8D1D;&#x53F6;&#x65AF;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5185;&#x5EFA;&#x8D1D;&#x53F6;&#x65AF;&#x67E5;&#x8BE2;&#x8BED;&#x8A00; BQL&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x9700;&#x7EDF;&#x8BA1;&#x65B9;&#x9762;&#x77E5;&#x8BC6;&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x79D1;&#x5B66;&#x6570;&#x636E;&#x95EE;&#x9898;</li>
+<li>Bedrock - &#x6784;&#x5EFA;&#x5728; SQLite &#x4E4B;&#x4E0A;&#x7684;&#x7B80;&#x5355;&#x3001;&#x6A21;&#x5757;&#x5316;&#x3001;&#x7F51;&#x7EDC;&#x5316;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;&#x5C42;&#x3002;</li>
+<li>CitusDB - &#x901A;&#x8FC7;&#x5206;&#x7247;&#x548C;&#x526F;&#x672C;&#x6269;&#x5C55; PostgreSQL&#x3002;</li>
+<li>Cockroach - &#x53EF;&#x4F38;&#x7F29;&#x3001;&#x5730;&#x7406;&#x590D;&#x5236;&#x3001;&#x4E8B;&#x52A1;&#x6027;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
+<li>Comdb2 - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x4E50;&#x89C2;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x6280;&#x672F;&#x7684;&#x96C6;&#x7FA4; RDBMS&#x3002;</li>
+<li>Datomic - &#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x65E8;&#x5728;&#x652F;&#x6301;&#x53EF;&#x4F38;&#x7F29;&#x3001;&#x7075;&#x6D3B;&#x548C;&#x667A;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>FoundationDB - &#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53D7; F1 &#x542F;&#x53D1;&#x3002;</li>
+<li>Google F1 - &#x6784;&#x5EFA;&#x5728; Spanner &#x4E4B;&#x4E0A;&#x7684;&#x5206;&#x5E03;&#x5F0F; SQL &#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Google Spanner - Google&#x7684;&#x5168;&#x7403;&#x7EA7;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5177;&#x6709;&#x53EF;&#x6269;&#x5C55;&#xFF0C;&#x591A;&#x7248;&#x672C;&#xFF0C;&#x5168;&#x7403;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x540C;&#x6B65;&#x590D;&#x5236;&#x7B49;&#x7279;&#x6027;&#x3002;</li>
+<li>H-Store - &#x4E00;&#x4E2A;&#x5B9E;&#x9A8C;&#x6027;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;&#x5B83;&#x4E13;&#x4E3A;&#x9A7B;&#x7EBF;&#x4EA4;&#x6613;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x800C;&#x8BBE;&#x8BA1;&#x3002;</li>
+<li>Haeinsa - Haeinsa &#x662F; HBase &#x53EF;&#x7EBF;&#x6027;&#x6269;&#x5C55;&#x7684;&#x591A;&#x884C;&#xFF0C;&#x591A;&#x8868;&#x4E8B;&#x52A1;&#x5E93;&#x3002;&#x4F7F;&#x7528;&#x4E24;&#x9636;&#x6BB5;&#x9501;&#x5B9A;&#x548C;&#x4E50;&#x89C2;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x6765;&#x5B9E;&#x73B0;&#x4E8B;&#x52A1;&#x3002; &#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x662F;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x3002;&#x57FA;&#x4E8E; Percolator &#x5B9E;&#x73B0;&#x3002;</li>
+<li>HandlerSocket - MySQL/MariaDB &#x7684; NoSQL &#x63D2;&#x4EF6;&#x3002;</li>
+<li>InfiniSQL - &#x65E0;&#x9650;&#x6269;&#x5C55;&#x7684; RDBMS.</li>
+<li>Map-D - GPU &#x5185;&#x5B58;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x53EF;&#x89C6;&#x5316;&#x5E73;&#x53F0;.</li>
+<li>MemSQL - &#x4E00;&#x6B3E;&#x5185;&#x5B58;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5C06; SQL &#x8BED;&#x53E5;&#x9884;&#x7F16;&#x8BD1;&#x4E3A; C++ &#x800C;&#x83B7;&#x5F97;&#x6781;&#x901F;&#x6267;&#x884C;&#x6548;&#x7387;&#x3002;</li>
+<li>NuoDB - &#x7B26;&#x5408; SQL/ACID &#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Oracle TimesTen in-Memory Database - &#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x7684;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;&#x5177;&#x6709;&#x6301;&#x4E45;&#x6027;&#x548C;&#x53EF;&#x6062;&#x590D;&#x6027;&#x3002;</li>
+<li>Pivotal GemFire XD - &#x4F4E;&#x5EF6;&#x8FDF;&#x3001;&#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x3001;&#x5206;&#x5E03;&#x5F0F; SQL &#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;&#x4E3A;&#x5185;&#x5B58;&#x8868;&#x6570;&#x636E;&#x63D0;&#x4F9B; SQL &#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x5728; HDFS &#x4E2D;&#x6301;&#x4E45;&#x5B58;&#x50A8;&#x3002;</li>
+<li>SAP HANA - &#x57FA;&#x4E8E;&#x5185;&#x5B58;&#x3001;&#x9762;&#x5411;&#x5217;&#x3001;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>SenseiDB - &#x5206;&#x5E03;&#x5F0F;&#x3001;&#x5B9E;&#x65F6;&#x3001;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Sky - &#x7528;&#x4E8E;&#x7075;&#x6D3B;&#x3001;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x884C;&#x4E3A;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>SymmetricDS - &#x7528;&#x4E8E;&#x6587;&#x4EF6;&#x548C;&#x6570;&#x636E;&#x5E93;&#x540C;&#x6B65;&#x7684;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x3002;</li>
+<li>TiDB - &#x4E00;&#x6B3E;&#x5B9A;&#x4F4D;&#x4E8E;&#x5728;&#x7EBF;&#x4E8B;&#x52A1;&#x5904;&#x7406;/&#x5728;&#x7EBF;&#x5206;&#x6790;&#x5904;&#x7406;&#x7684;&#x878D;&#x5408;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4EA7;&#x54C1;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x952E;&#x6C34;&#x5E73;&#x4F38;&#x7F29;&#xFF0C;&#x5F3A;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x591A;&#x526F;&#x672C;&#x6570;&#x636E;&#x5B89;&#x5168;&#xFF0C;&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;&#xFF0C;&#x5B9E;&#x65F6; OLAP &#x7B49;&#x91CD;&#x8981;&#x7279;&#x6027;&#x3002;&#x53D7; Google F1 &#x542F;&#x53D1;&#x3002;</li>
+<li>VoltDB - &#x58F0;&#x79F0;&#x662F;&#x6700;&#x5FEB;&#x7684;&#x5185;&#x5B58;&#x6570;&#x636E;&#x5E93;.</li>
+</ul>
+<h3 id="&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;">&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;</h3>
+<ul>
+<li>Axibase Time Series Database - &#x57FA;&#x4E8E; HBase &#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5185;&#x7F6E;&#x53EF;&#x89C6;&#x5316;&#x3001;&#x89C4;&#x5219;&#x5F15;&#x64CE;&#x548C; SQL &#x652F;&#x6301;&#x3002;</li>
+<li>Chronix - &#x4E00;&#x79CD;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5B58;&#x50A8;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x9AD8;&#x5EA6;&#x538B;&#x7F29;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#xFF0C;&#x5E76;&#x652F;&#x6301;&#x5FEB;&#x901F;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x3002;</li>
+<li>Cube - &#x4F7F;&#x7528; MongoDB &#x6765;&#x5B58;&#x50A8;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x3002;</li>
+<li>Heroic - &#x57FA;&#x4E8E; Cassandra &#x548C; Elasticsearch &#x7684;&#x53EF;&#x6269;&#x5C55;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>InfluxDB - &#x5206;&#x5E03;&#x5F0F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>IronDB - &#x53EF;&#x6269;&#x5C55;&#x3001;&#x901A;&#x7528;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Kairosdb - &#x548C; OpenTSDB &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x6784;&#x5EFA;&#x5728; Cassandra &#x4E4B;&#x4E0A;&#x3002;</li>
+<li>M3DB - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x957F;&#x671F;&#x5B58;&#x50A8;&#x5B9E;&#x65F6;&#x6307;&#x6807;&#x3002;</li>
+<li>Newts -&#x57FA;&#x4E8E; Apache Cassandra &#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>OpenTSDB -&#x6784;&#x5EFA;&#x5728; HBase &#x4E4B;&#x4E0A;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Prometheus - &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x548C;&#x670D;&#x52A1;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Beringei - Facebook &#x7684;&#x5185;&#x5B58;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>TrailDB - &#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x548C;&#x67E5;&#x8BE2;&#x4E00;&#x7CFB;&#x5217;&#x4E8B;&#x4EF6;&#x7684;&#x6709;&#x6548;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Druid MetaMarket &#x516C;&#x53F8;&#x7814;&#x53D1;&#xFF0C;&#x4E13;&#x4E3A;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x7684;&#x505A;&#x9AD8;&#x6027;&#x80FD; OLAP (OnLine Analysis Processing)&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x548C;&#x5206;&#x6790;&#x7CFB;&#x7EDF;</li>
+<li>Riak-TS Riak TS &#x662F;&#x552F;&#x4E00;&#x4E13;&#x4E3A;&#x7269;&#x8054;&#x7F51;&#x548C;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x4F18;&#x5316;&#x7684;&#x4F01;&#x4E1A;&#x7EA7; NoSQL &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Akumuli &#x4E00;&#x4E2A;&#x6570;&#x503C;&#x578B;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x3001;&#x5904;&#x7406;&#x65F6;&#x5E8F;&#x5217;&#x6570;&#x636E;</li>
+<li>Rhombus Cassandra&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x3002;</li>
+<li>Dalmatiner DB &#x5FEB;&#x901F;&#x5206;&#x5E03;&#x5F0F;&#x5EA6;&#x91CF;&#x6570;&#x636E;&#x5E93;</li>
+<li>Blueflood &#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x6444;&#x53D6;&#x548C;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Timely &#x662F;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E; Accumulo &#x548C; Grafana &#x7684;&#x5BF9;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x7684;&#x5B89;&#x5168;&#x8BBF;&#x95EE;&#x3002;</li>
+<li>SiriDB &#x5177;&#x6709;&#x96C6;&#x7FA4;&#x529F;&#x80FD;&#x7684;&#x9AD8;&#x6269;&#x5C55;&#x6027;&#x3001;&#x5065;&#x58EE;&#x6027;&#x548C;&#x5FEB;&#x901F;&#x7684;&#x5F00;&#x6E90;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Thanos - Thanos &#x662F;&#x4E00;&#x7EC4;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A; Prometheus &#x90E8;&#x7F72;&#x521B;&#x5EFA;&#x5177;&#x6709;&#x65E0;&#x9650;&#x5B58;&#x50A8;&#x5BB9;&#x91CF;&#x7684;&#x9AD8;&#x53EF;&#x7528;&#x5EA6;&#x91CF;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>VictoriaMetrics - &#x4E0E; Prometheus &#x517C;&#x5BB9;&#x7684;&#x5FEB;&#x901F;&#xFF0C;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x5F00;&#x6E90; TSDB&#xFF0C;&#x5305;&#x62EC;&#x5355;&#x8282;&#x70B9;&#x548C;&#x7FA4;&#x96C6;&#x7248;&#x672C;&#x3002;</li>
+</ul>
+<h3 id="&#x7C7B;-sql-&#x5904;&#x7406;&#x7CFB;&#x7EDF;">&#x7C7B; SQL &#x5904;&#x7406;&#x7CFB;&#x7EDF;</h3>
+<ul>
+<li>Actian SQL for Hadoop - &#x9AD8;&#x6027;&#x80FD;&#x4EA4;&#x4E92;&#x5F0F; SQL&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5B83;&#x8BBF;&#x95EE; Hadoop &#x4E0A;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>Apache Drill - &#x4E00;&#x4E2A;&#x4F4E;&#x5EF6;&#x8FDF;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x5F0F;&#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#xFF0C;&#x4F7F;&#x7528; ANSI SQL &#x517C;&#x5BB9;&#x8BED;&#x6CD5;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7684; MPP &#x67E5;&#x8BE2;&#x5C42;&#x3002;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x652F;&#x6301;&#x66F4;&#x5E7F;&#x6CDB;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x3002;&#x53D7; Google&#x7684;Dremel &#x542F;&#x53D1;&#x3002;</li>
+<li>Apache HCatalog - Hadoop&#x7684;&#x8868;&#x5B58;&#x50A8;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Apache Hive - &#x57FA;&#x4E8E; Hadoop &#x7684;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6620;&#x5C04;&#x4E3A;&#x4E00;&#x5F20;&#x6570;&#x636E;&#x5E93;&#x8868;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x7C7B; SQL &#x67E5;&#x8BE2;&#x529F;&#x80FD;.</li>
+<li>Apache Calcite - &#x4E00;&#x6B3E;&#x5F00;&#x6E90; SQL &#x89E3;&#x6790;&#x5DE5;&#x5177;, &#x53EF;&#x4EE5;&#x5C06;&#x5404;&#x79CD; SQL &#x8BED;&#x53E5;&#x89E3;&#x6790;&#x6210;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x672F;AST(Abstract Syntax Tree), &#x4E4B;&#x540E;&#x901A;&#x8FC7;&#x64CD;&#x4F5C; AST &#x5C31;&#x53EF;&#x4EE5;&#x628A; SQL &#x4E2D;&#x6240;&#x8981;&#x8868;&#x8FBE;&#x7684;&#x7B97;&#x6CD5;&#x4E0E;&#x5173;&#x7CFB;&#x4F53;&#x73B0;&#x5728;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x4E4B;&#x4E2D;&#x3002;</li>
+<li>Apache Phoenix - &#x6784;&#x5EFA;&#x5728; HBase &#x4E4B;&#x4E0A;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x5C42;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9; HBase &#x4E2D;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4F4E;&#x5EF6;&#x8FDF;&#x8BBF;&#x95EE;&#x3002;</li>
+<li>Aster Database - &#x7C7B; SQL &#x5206;&#x6790;&#x5904;&#x7406;&#x3002;</li>
+<li>Cloudera Impala - &#x5B9E;&#x65F6;&#x4EA4;&#x4E92; SQL &#x5927;&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x5DE5;&#x5177;&#xFF0C;&#x53D7; Dremel &#x542F;&#x53D1;&#x3002;</li>
+<li>Concurrent Lingual - Cascading &#x4E0A;&#x7684; SQL &#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x3002;</li>
+<li>Datasalt Splout SQL - &#x9488;&#x5BF9;&#x5927;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5B8C;&#x6574; SQL &#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Facebook PrestoDB -&#x5206;&#x5E03;&#x5F0F; SQL &#x67E5;&#x8BE2;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Google BigQuery - Google &#x63A8;&#x51FA;&#x7684;&#x4E00;&#x9879; Web &#x670D;&#x52A1;&#xFF0C;&#x8BE5;&#x670D;&#x52A1;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Google &#x7684;&#x67B6;&#x6784;&#x6765;&#x8FD0;&#x884C; SQL &#x8BED;&#x53E5;&#x5BF9;&#x8D85;&#x7EA7;&#x5927;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x662F; Dremel &#x7684;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>PipelineDB - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x5B9E;&#x65F6;&#x6D41;&#x6570;&#x636E;&#x4E0A;&#x6267;&#x884C; SQL &#x67E5;&#x8BE2;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x589E;&#x91CF;&#x5730;&#x5B58;&#x50A8;&#x5728;&#x8868;&#x4E2D;&#x3002;</li>
+<li>Pivotal HDB - Hadoop &#x4E0A;&#x7684;&#x7C7B; SQL &#x6570;&#x636E;&#x4ED3;&#x5E93;&#x7CFB;&#x7EDF;&#x3002;/li&gt;</li>
+<li>RainstorDB - &#x7528;&#x4E8E;&#x5B58;&#x50A8; PB &#x7EA7;&#x7ED3;&#x6784;&#x5316;&#x548C;&#x534A;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x91CF;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Spark Catalyst - Apache Spark &#x7684;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x6846;&#x67B6;&#x3002;</li>
+<li>SparkSQL - &#x4F7F;&#x7528; Spark &#x64CD;&#x4F5C;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>Splice Machine - &#x517C;&#x5177;&#x4E86; SQL &#x548C; NoSQL &#x7684;&#x5404;&#x81EA;&#x4F18;&#x52BF;&#xFF0C;&#x4E14;&#x80FD;&#x5BF9;&#x64CD;&#x4F5C;&#x578B;&#x548C;&#x5206;&#x6790;&#x578B;&#x5E94;&#x7528;&#x8FDB;&#x884C;&#x5B9E;&#x65F6;&#x5904;&#x7406;&#xFF0C;&#x5177;&#x6709; ACID &#x7279;&#x6027;&#x3002;</li>
+<li>Stinger - &#x7531; Hortonworks &#x5F00;&#x53D1;&#x7684;&#x4E00;&#x4E2A;&#x5F7B;&#x5E95;&#x63D0;&#x5347; Hive &#x6548;&#x7387;&#x7684;&#x5DE5;&#x5177;</li>
+<li>Tajo - Hadoop &#x4E4B;&#x4E0A;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Trafodion - &#x7531;&#x60E0;&#x666E;&#x5F00;&#x53D1;&#x5E76;&#x5F00;&#x6E90;&#x7684;&#x57FA;&#x4E8E; Hadoop &#x5E73;&#x53F0;&#x7684;&#x4E8B;&#x52A1;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;&#x3002;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Hadoop &#x5E73;&#x53F0;&#x7684;&#x4EA4;&#x6613;&#x578B; SQL &#x5F15;&#x64CE;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x64C5;&#x957F;&#x5904;&#x7406;&#x4EA4;&#x6613;&#x578B;&#x8D1F;&#x8F7D;&#x7684; Hadoop &#x5927;&#x6570;&#x636E;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</li>
+</ul>
+<h3 id="&#x6570;&#x636E;&#x6444;&#x53D6;">&#x6570;&#x636E;&#x6444;&#x53D6;</h3>
+<ul>
+<li>Amazon Kinesis - &#x4E00;&#x79CD;&#x5728; AWS &#x4E0A;&#x6D41;&#x5F0F;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x5E73;&#x53F0;,&#x8BA9;&#x60A8;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x52A0;&#x8F7D;&#x548C;&#x5206;&#x6790;&#x6D41;&#x6570;&#x636E;,&#x540C;&#x65F6;&#x8FD8;&#x53EF;&#x8BA9;&#x60A8;&#x6839;&#x636E;&#x5177;&#x4F53;&#x9700;&#x6C42;&#x6765;&#x6784;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x6D41;&#x6570;&#x636E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Amazon Web Services Glue - &#x4E00;&#x9879;&#x5B8C;&#x5168;&#x6258;&#x7BA1;&#x7684;&#x63D0;&#x53D6;&#x3001;&#x8F6C;&#x6362;&#x548C;&#x52A0;&#x8F7D; (ETL) &#x670D;&#x52A1;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x80FD;&#x591F;&#x8F7B;&#x677E;&#x51C6;&#x5907;&#x548C;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</li>
+<li>Apache Chukwa - &#x6570;&#x636E;&#x91C7;&#x96C6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache Flume - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x3001;&#x53EF;&#x9760;&#x7684;&#x3001;&#x6613;&#x7528;&#x7684;&#x7CFB;&#x7EDF;,&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x5730;&#x5C06;&#x6765;&#x81EA;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x6E90;&#x7CFB;&#x7EDF;&#x7684;&#x5927;&#x91CF;&#x65E5;&#x5FD7;&#x6570;&#x636E;&#x6536;&#x96C6;&#x3001;&#x6C47;&#x603B;&#x6216;&#x8005;&#x8F6C;&#x79FB;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x5B58;&#x50A8;&#x3002;</li>
+<li>Apache Kafka - &#x5206;&#x5E03;&#x5F0F;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache NiFi - &#x4E00;&#x4E2A;&#x6613;&#x7528;&#x3001;&#x5F3A;&#x5927;&#x3001;&#x53EF;&#x9760;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x4E0E;&#x5206;&#x53D1;&#x7CFB;&#x7EDF;</li>
+<li>Apache Sqoop - &#x662F;&#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5728; Hadoop/Hive &#x4E0E;&#x4F20;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x5E93;(Mysql&#x3001;Oracle...)&#x95F4;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7684;&#x4F20;&#x9012;</li>
+<li>Cloudera Morphlines - &#x5E2E;&#x52A9;&#x5C06; ETL &#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5230; Solr&#x3001;HBase &#x6216; Hadoop &#x4E2D;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Embulk - &#x5F00;&#x6E90;&#x7684;&#x6279;&#x91CF;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#xFF0C;&#x5E2E;&#x52A9;&#x5728;&#x5404;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x3001;&#x5B58;&#x50A8;&#x3001;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x548C;&#x4E91;&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x3002;</li>
+<li>Facebook Scribe - &#x6D41;&#x65E5;&#x5FD7;&#x6570;&#x636E;&#x805A;&#x5408;&#x5668;&#x3002;</li>
+<li>Fluentd - &#x7528;&#x4E8E;&#x6536;&#x96C6;&#x4E8B;&#x4EF6;&#x548C;&#x65E5;&#x5FD7;&#x7684;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Google Photon - &#x5730;&#x7406;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x8FDE;&#x63A5;&#x591A;&#x4E2A;&#x8FDE;&#x7EED;&#x6D41;&#x52A8;&#x7684;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5177;&#x6709;&#x9AD8;&#x53EF;&#x4F38;&#x7F29;&#x6027;&#x548C;&#x4F4E;&#x5EF6;&#x8FDF;&#x3002;</li>
+<li>Heka - &#x5F00;&#x6E90;&#x6D41;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>HIHO - &#x7528;&#x4E8E;&#x5C06;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6E90;&#x7684;&#x6570;&#x636E;&#x548C; Hadoop &#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Kestrel - &#x5206;&#x5E03;&#x5F0F;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>LinkedIn Databus - LinkedIn &#x5F00;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x4F4E;&#x5EF6;&#x8FDF;&#x3001;&#x53EF;&#x9760;&#x7684;&#x3001;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x7684;&#x3001;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x6570;&#x636E;&#x53D8;&#x66F4;&#x6293;&#x53D6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>LinkedIn Kamikaze - &#x4E00;&#x79CD;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x5BF9; document lists &#x63D0;&#x4F9B;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>LinkedIn White Elephant - &#x4E00;&#x4E2A; Hadoop &#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x5668;&#x548C;&#x5C55;&#x793A;&#x5668;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x6237;&#x89D2;&#x5EA6;&#x7684;Hadoop&#x96C6;&#x7FA4;&#x53EF;&#x89C6;&#x5316;&#x3002;</li>
+<li>Logstash - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x96C6;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6E90;&#x7684;&#x6570;&#x636E;,&#x5E76;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x540E;&#x8F93;&#x51FA;&#x5230;&#x591A;&#x79CD;&#x8F93;&#x51FA;&#x6E90;&#x3002;</li>
+<li>Netflix Suro - Netflix &#x5F00;&#x6E90;&#x7684;&#x4E00;&#x6B3E;&#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x5728;&#x6570;&#x636E;&#x88AB;&#x53D1;&#x9001;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5E73;&#x53F0;(&#x5982;Hadoop&#x3001;Elasticsearch)&#x4E4B;&#x524D;&#xFF0C;&#x6536;&#x96C6;&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x3002;</li>
+<li>Pinterest Secor - &#x5B9E;&#x73B0; Kafka &#x65E5;&#x5FD7;&#x6301;&#x4E45;&#x6027;&#x7684;&#x670D;&#x52A1;</li>
+<li>Linkedin Gobblin -&#x4E00;&#x5957;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x96C6;&#x6210;&#x6846;&#x67B6;&#xFF0C;&#x65E8;&#x5728;&#x7B80;&#x5316;&#x5927;&#x6570;&#x636E;&#x96C6;&#x6210;&#x5DE5;&#x4F5C;&#x5F53;&#x4E2D;&#x7684;&#x5404;&#x7C7B;&#x5E38;&#x89C1;&#x4EFB;&#x52A1;&#xFF0C;&#x5177;&#x4F53;&#x5305;&#x62EC;&#x6570;&#x636E;&#x6D41;&#x4E0E;&#x6279;&#x91CF;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x7684;&#x63D0;&#x53D6;&#x3001;&#x590D;&#x5236;&#x3001;&#x7EC4;&#x7EC7;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&#x3002;</li>
+<li>Skizze - &#x4E00;&#x79CD;&#x6982;&#x7387;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x670D;&#x52A1;&#x548C;&#x5B58;&#x50A8;&#x3002;</li>
+<li>StreamSets Data Collector - &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; IDE &#x6765;&#x8FDE;&#x7EED;&#x5927;&#x6570;&#x636E;&#x6444;&#x53D6;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;</li>
+<li>Yahoo Pulsar - &#x7531; Yahoo &#x5F00;&#x53D1;&#x5E76;&#x5F00;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x7684;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Alooma - &#x5B9E;&#x65F6;&#x7684;&#x6570;&#x636E;&#x7BA1;&#x9053;&#x670D;&#x52A1;&#xFF0C;&#x652F;&#x6301;&#x5C06; MySQL &#x7B49;&#x6570;&#x636E;&#x6E90;&#x7684;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x4E2D;&#x3002;</li>
+</ul>
+<h3 id="&#x670D;&#x52A1;&#x7F16;&#x7A0B;">&#x670D;&#x52A1;&#x7F16;&#x7A0B;</h3>
+<ul>
+<li>Akka Toolkit - &#x57FA;&#x4E8E; Actor &#x6A21;&#x578B;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x53EF;&#x6269;&#x5C55;&#x7684;(Scalable)&#x3001;&#x5F39;&#x6027;&#x7684;(Resilient)&#x3001;&#x5FEB;&#x901F;&#x54CD;&#x5E94;&#x7684;(Responsive)&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Apache Avro - &#x6570;&#x636E;&#x5E8F;&#x5217;&#x5316;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache Curator - &#x4E3A; Apache ZooKeeper &#x5F00;&#x53D1;&#x7684;&#x7C7B;&#x5E93;&#x3002;</li>
+<li>Apache Karaf - Apache &#x65D7;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; OSGi &#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;Karaf &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684; OSGi &#x5BB9;&#x5668;,&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x90E8;&#x7F72;&#x5404;&#x79CD;&#x7EC4;&#x4EF6;,&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Apache Thrift - Facebook &#x5F00;&#x6E90;&#x7684;&#x8DE8;&#x8BED;&#x8A00;&#x7684; RPC &#x901A;&#x4FE1;&#x6846;&#x67B6;</li>
+<li>Apache Zookeeper - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x534F;&#x8C03;&#x670D;&#x52A1;&#x3002;</li>
+<li>Google Chubby - &#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x9501;&#x670D;&#x52A1;&#xFF0C;Chubby &#x5E95;&#x5C42;&#x4E00;&#x81F4;&#x6027;&#x5B9E;&#x73B0;&#x5C31;&#x662F;&#x4EE5; Paxos &#x4E3A;&#x57FA;&#x7840;&#x7684;</li>
+<li>Hydrosphere Mist - &#x4E00;&#x4E2A;&#x5C06; Apache Spark &#x5206;&#x6790;&#x4EFB;&#x52A1;&#x548C;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5B9E;&#x65F6;&#x3001;&#x6279;&#x5904;&#x7406;&#x6216;&#x53CD;&#x5E94;&#x6027; web &#x670D;&#x52A1;&#x7684;&#x670D;&#x52A1;&#x3002;</li>
+<li>Linkedin Norbert - &#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Mara - &#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x81EA;&#x5B9A;&#x4E49;ETL&#x6846;&#x67B6;&#x3002;</li>
+<li>OpenMPI - &#x6D88;&#x606F;&#x4F20;&#x9012;&#x6846;&#x67B6;&#x3002;</li>
+<li>Serf - &#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x548C;&#x7F16;&#x6392;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</li>
+<li>Spotify Luigi - &#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x6279;&#x5904;&#x7406;&#x4F5C;&#x4E1A;&#x7684;&#x590D;&#x6742;&#x7BA1;&#x9053;&#x7684; Python &#x5305;&#x3002;&#x5B83;&#x5904;&#x7406;&#x4F9D;&#x8D56;&#x9879;&#x89E3;&#x6790;&#x3001;&#x5DE5;&#x4F5C;&#x6D41;&#x7BA1;&#x7406;&#x3001;&#x53EF;&#x89C6;&#x5316;&#x3001;&#x5904;&#x7406;&#x6545;&#x969C;&#x3001;&#x547D;&#x4EE4;&#x884C;&#x96C6;&#x6210;&#x7B49;&#x7B49;&#x3002;</li>
+<li>Spring XD - &#x7528;&#x4E8E;&#x6570;&#x636E;&#x6444;&#x53D6;&#x3001;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x3001;&#x6279;&#x5904;&#x7406;&#x548C;&#x6570;&#x636E;&#x5BFC;&#x51FA;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Twitter Elephant Bird - &#x7528;&#x4E8E;&#x5904;&#x7406; lzop &#x538B;&#x7F29;&#x6570;&#x636E;&#x7684;&#x5E93;&#x3002;</li>
+<li>Twitter Finagle - JVM&#x7684;&#x5F02;&#x6B65;&#x7F51;&#x7EDC;&#x5806;&#x6808;&#x3002;</li>
+</ul>
+<h3 id="&#x8C03;&#x5EA6;">&#x8C03;&#x5EA6;</h3>
+<ul>
+<li>Apache Airflow - Airbnb &#x5F00;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x7528; Python &#x7F16;&#x5199;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7BA1;&#x7406;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Apache Aurora - &#x957F;&#x671F;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x548C;&#x8BA1;&#x5212;&#x4F5C;&#x4E1A;&#x7684; Mesos &#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Falcon - &#x6570;&#x636E;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Oozie - &#x5DE5;&#x4F5C;&#x6D41;&#x4F5C;&#x4E1A;&#x8C03;&#x5EA6;&#x5668;&#x3002;</li>
+<li>Azure Data Factory - &#x53EF;&#x5927;&#x89C4;&#x6A21;&#x7B80;&#x5316; ETL &#x7684;&#x6DF7;&#x5408;&#x6570;&#x636E;&#x96C6;&#x6210;&#x670D;&#x52A1;</li>
+<li>Chronos - &#x5206;&#x5E03;&#x5F0F;&#x548C;&#x5BB9;&#x9519;&#x8C03;&#x5EA6;&#x5668;&#x3002;</li>
+<li>Linkedin Azkaban - &#x6279;&#x5904;&#x7406;&#x5DE5;&#x4F5C;&#x6D41;&#x4F5C;&#x4E1A;&#x8C03;&#x5EA6;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Schedoscope - &#x7528;&#x4E8E; Hadoop &#x4F5C;&#x4E1A;&#x7684;&#x654F;&#x6377;&#x8C03;&#x5EA6; Scala DSL&#x3002;</li>
+<li>Sparrow - &#x8C03;&#x5EA6;&#x5E73;&#x53F0;&#x3002;</li>
+</ul>
+<h3 id="&#x673A;&#x5668;&#x5B66;&#x4E60;">&#x673A;&#x5668;&#x5B66;&#x4E60;</h3>
+<ul>
+<li>Azure ML Studio - &#x57FA;&#x4E8E;&#x4E91;&#x7684; R&#x3001;Python &#x673A;&#x5668;&#x5B66;&#x4E60;&#x5E73;&#x53F0;&#x3002;</li>
+<li>brain - JavaScript &#x4E2D;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3002;</li>
+<li>Cloudera Oryx - &#x5B9E;&#x65F6;&#x5927;&#x89C4;&#x6A21;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3002;</li>
+<li>Concurrent Pattern - Cascading &#x4E0A;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#x3002;</li>
+<li>convnetjs - Javascript &#x4E2D;&#x7684;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8BAD;&#x7EC3;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;(&#x6216;&#x666E;&#x901A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;)&#x3002;</li>
+<li>DataVec - &#x4E00;&#x4E2A;&#x7528;&#x4E8E; Java &#x548C; Scala &#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x7684;&#x77E2;&#x91CF;&#x5316;&#x548C;&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;&#x5E93;&#x3002;Deeplearning4j&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</li>
+<li>Deeplearning4j - &#x7F8E;&#x56FD; AI &#x521B;&#x4E1A;&#x516C;&#x53F8; Skymind &#x5F00;&#x6E90;&#x5E76;&#x7EF4;&#x62A4;&#x7684;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Java/JVM &#x7684;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;CPU&#x6216;GPU&#x8FD0;&#x884C;&#x3002;</li>
+<li>Decider - Ruby&#x4E2D;&#x7075;&#x6D3B;&#x4E14;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3002;</li>
+<li>ENCOG - &#x652F;&#x6301;&#x591A;&#x79CD;&#x9AD8;&#x7EA7;&#x7B97;&#x6CD5;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#xFF0C;&#x4EE5;&#x53CA;&#x652F;&#x6301;&#x89C4;&#x8303;&#x5316;&#x548C;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x3002;</li>
+<li>etcML - &#x5728;&#x7EBF;&#x514D;&#x8D39;&#x6587;&#x672C;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x662F;&#x7531;&#x7F8E;&#x56FD;&#x7684;&#x65AF;&#x5766;&#x798F;&#x5927;&#x5B66;&#x8BA1;&#x7B97;&#x673A;&#x6559;&#x6388;&#x5F00;&#x53D1;&#x7684;&#x57FA;&#x4E8E;&#x6210;&#x719F;&#x7684;&#x6587;&#x672C;&#x5206;&#x6790;&#x5F15;&#x64CE;</li>
+<li>Etsy Conjecture - Scalding &#x4E2D;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3002;</li>
+<li>Feast - &#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x3001;&#x53D1;&#x73B0;&#x548C;&#x8BBF;&#x95EE;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7279;&#x6027;&#x7684;&#x7279;&#x6027;&#x5B58;&#x50A8;&#x5E93;&#x3002;Feast &#x4E3A;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#x548C;&#x6A21;&#x578B;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x81F4;&#x7684;&#x7279;&#x5F81;&#x6570;&#x636E;&#x89C6;&#x56FE;&#x3002;</li>
+<li>GraphLab Create - Python &#x4E2D;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x5E73;&#x53F0;&#xFF0C;&#x5305;&#x542B;&#x5927;&#x91CF; ML &#x5DE5;&#x5177;&#x5305;&#x3001;&#x6570;&#x636E;&#x5DE5;&#x7A0B;&#x548C;&#x90E8;&#x7F72;&#x5DE5;&#x5177;&#x3002;</li>
+<li>H2O - &#x4F7F;&#x7528; Hadoop&#x3001;R &#x548C; Python &#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x3001;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x6570;&#x5B66;&#x8FD0;&#x884C;&#x65F6;&#x3002;</li>
+<li>Keras - &#x4E00;&#x4E2A;&#x9AD8;&#x5C42;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;API&#xFF0C;Keras &#x7531;&#x7EAF; Python &#x7F16;&#x5199;&#x800C;&#x6210;&#x5E76;&#x57FA; Tensorflow&#x3001;Theano &#x4EE5;&#x53CA; CNTK &#x540E;&#x7AEF;&#x3002;&#x53D7; Torch &#x542F;&#x53D1;&#x3002;</li>
+<li>Lambdo &#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x6D41;&#x5F15;&#x64CE;&#xFF0C;&#x901A;&#x8FC7;&#x5C06;&#x4E00;&#x4E2A;&#x5206;&#x6790;&#x7BA1;&#x9053;(i)&#x7279;&#x5F81;&#x5DE5;&#x7A0B;&#x548C;&#x673A;&#x5668;&#x5B66;&#x4E60;(ii)&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#x548C;&#x9884;&#x6D4B;(iii)&#x7ED3;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x901A;&#x8FC7;&#x7528;&#x6237;&#x5B9A;&#x4E49;(Python)&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x8868;&#x586B;&#x5145;&#x548C;&#x5217;&#x8BC4;&#x4F30;&#xFF0C;&#x5927;&#x5927;&#x7B80;&#x5316;&#x4E86;&#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x5206;&#x6790;&#x3002;</li>
+<li>Mahout - &#x662F; Apache Software Foundation(ASF) &#x65D7;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;,&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x9886;&#x57DF;&#x7ECF;&#x5178;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;,&#x65E8;&#x5728;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x5730;&#x521B;&#x5EFA;&#x667A;&#x80FD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>MLbase - &#x662F;Spark&#x751F;&#x6001;&#x5708;&#x7684;&#x4E00;&#x90E8;&#x5206;,&#x4E13;&#x6CE8;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;,&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;:MLlib&#x3001;MLI&#x3001;ML Optimizer&#x3002;</li>
+<li>MLPNeuralNet - &#x4E00;&#x4E2A;&#x9488;&#x5BF9; iOS &#x548C; Mac OS &#x7CFB;&#x7EDF;&#x7684;&#x5FEB;&#x901F;&#x591A;&#x5C42;&#x611F;&#x77E5;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x5E93;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x5DF2;&#x8BAD;&#x7EC3;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x9884;&#x6D4B;&#x65B0;&#x5B9E;&#x4F8B;&#x3002;</li>
+<li>MOA - &#x5B9E;&#x65F6;&#x8FDB;&#x884C;&#x5927;&#x6570;&#x636E;&#x6D41;&#x6316;&#x6398;&#x548C;&#x5927;&#x89C4;&#x6A21;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3002;</li>
+<li>MonkeyLearn - &#x8BA9;&#x6587;&#x672C;&#x6316;&#x6398;&#x53D8;&#x5F97;&#x5F88;&#x5BB9;&#x6613;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x6587;&#x672C;&#x4E2D;&#x63D0;&#x53D6;&#x548C;&#x5206;&#x7C7B;&#x6570;&#x636E;&#x3002;</li>
+<li>ND4J - JVM &#x7684;&#x77E9;&#x9635;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F; Java &#x4E2D;&#x7684; Numpy&#x3002;</li>
+<li>nupic - &#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86;HTM&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x7684;&#x673A;&#x5668;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#x3002;</li>
+<li>PredictionIO - &#x9762;&#x5411;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x548C;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5BB6;&#x7684;&#x5F00;&#x6E90;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x670D;&#x52A1;&#xFF0C;&#x6784;&#x5EFA;&#x5728; Hadoop, Mahout &#x548C; Cascading &#x4E4B;&#x4E0A;&#x3002;</li>
+<li>RL4J - &#x4E00;&#x4E2A;&#x4E0E; Deeplearning4j &#x96C6;&#x6210;&#x7684;&#x5F3A;&#x5316;&#x5B66;&#x4E60;&#x6846;&#x67B6;</li>
+<li>SAMOA - &#x5206;&#x5E03;&#x5F0F;&#x6D41;&#x6570;&#x636E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#x3002;</li>
+<li>scikit-learn - &#x4E13;&#x95E8;&#x9762;&#x5411;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684; Python &#x5F00;&#x6E90;&#x6846;&#x67B6;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5404;&#x79CD;&#x6210;&#x719F;&#x7684;&#x7B97;&#x6CD5;&#x3002;</li>
+<li>Spark MLlib - &#x4F7F;&#x7528; Spark &#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x548C;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;,&#x5305;&#x62EC;&#x5206;&#x7C7B;&#x3001;&#x56DE;&#x5F52;&#x3001;&#x805A;&#x7C7B;&#x3001;&#x534F;&#x540C;&#x8FC7;&#x6EE4;&#x3001;&#x964D;&#x7EF4;&#x4EE5;&#x53CA;&#x5E95;&#x5C42;&#x4F18;&#x5316;,</li>
+<li>Sibyl - &#x8C37;&#x6B4C;&#x5927;&#x578B;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7CFB;&#x7EDF;.</li>
+<li>TensorFlow - &#x4E00;&#x4E2A;&#x91C7;&#x7528;&#x6570;&#x636E;&#x6D41;&#x56FE;(data flow graphs)&#xFF0C;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x8BA1;&#x7B97;&#x7684;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x5E93;&#x3002;</li>
+<li>Theano - &#x8499;&#x7279;&#x5229;&#x5C14;&#x5927;&#x5B66;&#x652F;&#x6301;&#x7684;&#x4EE5; Python &#x4E3A;&#x6838;&#x5FC3;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7C7B;&#x5E93;&#x3002;</li>
+<li>Torch - &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; BSD License &#x7684;&#x5F00;&#x6E90;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x6846;&#x67B6;</li>
+<li>Velox - &#x670D;&#x52A1;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x9884;&#x6D4B;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Vowpal Wabbit - &#x7531;&#x5FAE;&#x8F6F;&#x548C;&#x96C5;&#x864E;&#x8D5E;&#x52A9;&#x7684;&#x5B66;&#x4E60;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>WEKA - &#x4E00;&#x5957;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x8F6F;&#x4EF6;&#x3002;</li>
+<li>BidMach - CPU &#x548C; GPU &#x52A0;&#x901F;&#x5E93;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x5E93;&#x3002;</li>
+<li>Benchmarking</li>
+<li>Apache Hadoop Benchmarking - &#x6D4B;&#x8BD5; Hadoop &#x6027;&#x80FD;&#x7684;&#x5FAE;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li>Berkeley SWIM Benchmark - &#x771F;&#x5B9E;&#x5927;&#x6570;&#x636E;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x57FA;&#x51C6;&#x3002;</li>
+<li>Intel HiBench - Hadoop &#x57FA;&#x51C6;&#x5957;&#x4EF6;&#x3002;</li>
+<li>PUMA Benchmarking - MapReduce &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x5957;&#x4EF6;&#x3002;</li>
+<li>Yahoo Gridmix3 - &#x6765;&#x81EA; Yahoo &#x5DE5;&#x7A0B;&#x5E08;&#x56E2;&#x961F;&#x7684; Hadoop &#x96C6;&#x7FA4;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li>Deeplearning4j Benchmarks</li>
+</ul>
+<h3 id="&#x5B89;&#x5168;">&#x5B89;&#x5168;</h3>
+<ul>
+<li>Apache Ranger - &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x5728; Hadoop &#x5E73;&#x53F0;&#x4E0A;&#x5E76;&#x63D0;&#x4F9B;&#x64CD;&#x4F5C;&#x3001;&#x76D1;&#x63A7;&#x3001;&#x7BA1;&#x7406;&#x7EFC;&#x5408;&#x6570;&#x636E;&#x5B89;&#x5168;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Eagle -&#x7531; eBay &#x516C;&#x53F8;&#x5F00;&#x6E90;&#x7684;&#x4E00;&#x4E2A;&#x8BC6;&#x522B;&#x5927;&#x6570;&#x636E;&#x5E73;&#x53F0;&#x4E0A;&#x7684;&#x5B89;&#x5168;&#x548C;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x7684;&#x5F00;&#x6E90;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</li>
+<li>Apache Knox Gateway - Hadoop &#x96C6;&#x7FA4;&#x4E2D;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684; REST API &#x7F51;&#x5173;</li>
+<li>Apache Sentry - &#x4E3A; Hadoop &#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5143;&#x6570;&#x636E;&#x548C;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x63D0;&#x4F9B;&#x96C6;&#x4E2D;&#x3001;&#x7EC6;&#x7C92;&#x5EA6;&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x3002;</li>
+<li>BDA - Hadoop &#x548C; Spark &#x7684;&#x6F0F;&#x6D1E;&#x68C0;&#x6D4B;&#x5668;</li>
+</ul>
+<h3 id="&#x7CFB;&#x7EDF;&#x90E8;&#x7F72;">&#x7CFB;&#x7EDF;&#x90E8;&#x7F72;</h3>
+<ul>
+<li>Apache Ambari - &#x4E00;&#x4E2A;&#x96C6;&#x4E2D;&#x90E8;&#x7F72;&#x3001;&#x7BA1;&#x7406;&#x3001;&#x76D1;&#x63A7;Hadoop &#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x7684;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Apache Bigtop - &#x4E00;&#x4E2A;&#x9488;&#x5BF9;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5DE5;&#x7A0B;&#x5E08;&#x548C;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5BB6;&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x65E8;&#x5728;&#x5168;&#x9762;&#x6253;&#x5305;&#x3001;&#x6D4B;&#x8BD5;&#x548C;&#x914D;&#x7F6E;&#x9886;&#x5148;&#x7684;&#x5F00;&#x6E90;&#x5927;&#x6570;&#x636E;&#x7EC4;&#x4EF6;/&#x9879;&#x76EE;&#xFF0C;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E; Hadoop&#x3001;HBase &#x548C; Spark &#x3002;</li>
+<li>Apache Helix - &#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Mesos - &#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E; YARN &#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x6548;&#x7684;&#x3001;&#x8DE8;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x6216;&#x6846;&#x67B6;&#x7684;&#x8D44;&#x6E90;&#x9694;&#x79BB;&#x548C;&#x5171;&#x4EAB;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C; Hadoop&#x3001;MPI&#x3001;Hypertable&#x3001;Spark&#x3002;</li>
+<li>Apache Slider - &#x662F;&#x4E00;&#x4E2A; YARN &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7528;&#x4E8E;&#x5728; YARN &#x4E0A;&#x90E8;&#x7F72;&#x73B0;&#x6709;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Apache Whirr - &#x8FD0;&#x884C;&#x4E91;&#x670D;&#x52A1;&#x7684;&#x4E00;&#x7EC4; Java &#x7C7B;&#x5E93;&#x3002;</li>
+<li>Apache YARN - &#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Brooklyn - &#x7B80;&#x5316;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x7684;&#x5E93;&#x3002;</li>
+<li>Buildoop - &#x7C7B;&#x4F3C;&#x4E8E; Apache BigTop&#xFF0C;&#x57FA;&#x4E8E; Groovy &#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x3002;</li>
+<li>Cloudera HUE - &#x7528;&#x4E8E;&#x4E0E; Hadoop &#x4EA4;&#x4E92;&#x7684; web &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Facebook Prism - &#x591A;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x590D;&#x5236;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Google Borg - Google &#x7684;&#x5185;&#x90E8;&#x5927;&#x578B;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Google Omega - Google &#x5185;&#x90E8;&#x7B2C;&#x4E09;&#x4EE3;&#x7684;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x6846;&#x67B6;&#x3002;</li>
+<li>Hortonworks HOYA - &#x53EF;&#x4EE5;&#x5728; YARN &#x4E0A;&#x90E8;&#x7F72; HBase &#x96C6;&#x7FA4;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Kubernetes - Google &#x56E2;&#x961F;&#x53D1;&#x8D77;&#x5E76;&#x7EF4;&#x62A4;&#x7684;&#x57FA;&#x4E8E; Docker &#x7684;&#x5F00;&#x6E90;&#x5BB9;&#x5668;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Marathon - &#x4E00;&#x4E2A; Mesos &#x6846;&#x67B6;&#xFF0C;&#x80FD;&#x591F;&#x652F;&#x6301;&#x8FD0;&#x884C;&#x957F;&#x670D;&#x52A1;&#x3002;</li>
+</ul>
+<h3 id="&#x5E94;&#x7528;&#x7A0B;&#x5E8F;">&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</h3>
+<ul>
+<li>411 - &#x4E00;&#x4E2A;&#x8B66;&#x62A5;&#x7BA1;&#x7406;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Adobe spindle - &#x4F7F;&#x7528; Scala&#x3001;Spark &#x548C; Parquet &#x8FDB;&#x884C; web &#x5206;&#x6790;&#x7684;&#x4E0B;&#x4E00;&#x4EE3;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache Kiji - &#x57FA;&#x4E8E; HBase &#x7684;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x4E0E;&#x5206;&#x6790;&#x6846;&#x67B6;&#x3002;</li>
+<li>Apache Metron - &#x4E00;&#x79CD;&#x591A;&#x529F;&#x80FD;&#x7684;&#x5B89;&#x5168;&#x9065;&#x6D4B;&#x6570;&#x636E;&#x6355;&#x83B7;&#x3001;&#x6D41;&#x5206;&#x6790;&#x548C;&#x5A01;&#x80C1;&#x54CD;&#x5E94;&#x5E73;&#x53F0;&#xFF0C;&#x4EE3;&#x8868;&#x4E86;&#x5B89;&#x5168;&#x6570;&#x636E;&#x5E73;&#x53F0;&#x7684;&#x6700;&#x65B0;&#x53D1;&#x5C55;&#x6C34;&#x5E73;&#x3002;</li>
+<li>Apache Nutch - &#x5F00;&#x6E90; web &#x722C;&#x866B;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Apache OODT - NASA &#x5F00;&#x6E90;&#x7684;&#x7528;&#x4E8E;&#x505A;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Apache Tika - &#x4F7F;&#x7528; Java &#x7F16;&#x5199;&#x7684;&#x5185;&#x5BB9;&#x68C0;&#x6D4B;&#x548C;&#x5206;&#x6790;&#x6846;&#x67B6;&#x3002;</li>
+<li>Argus - &#x65F6;&#x5E8F;&#x76D1;&#x63A7;&#x62A5;&#x8B66;&#x5E73;&#x53F0;&#x3002;</li>
+<li>AthenaX - &#x4E00;&#x4E2A;&#x6D41;&#x5206;&#x6790;&#x5E73;&#x53F0;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;(SQL)&#x8FD0;&#x884C;&#x751F;&#x4EA7;&#x8D28;&#x91CF;&#x7684;&#x5927;&#x89C4;&#x6A21;&#x6D41;&#x5206;&#x6790;&#x3002;</li>
+<li>Atlas - &#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x7EF4;&#x5EA6;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Countly - &#x57FA;&#x4E8E; Node.js &#x548C; MongoDB &#x7684;&#x5F00;&#x6E90;&#x79FB;&#x52A8;&#x548C; web &#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Domino - &#x8FD0;&#x884C;&#x3001;&#x6269;&#x5C55;&#x3001;&#x5171;&#x4EAB;&#x548C;&#x90E8;&#x7F72;&#x6A21;&#x578B;&#x2014;&#x2014;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;</li>
+<li>Eclipse BIRT - &#x57FA;&#x4E8E; Eclipse &#x7684;&#x62A5;&#x544A;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>ElastAert - &#x4E3A; ES &#x6253;&#x9020;&#x7684;&#x62A5;&#x8B66;&#x76D1;&#x63A7;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Eventhub - &#x5F00;&#x6E90;&#x4E8B;&#x4EF6;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Hermes - &#x6784;&#x5EFA;&#x5728; Kafka &#x4E4B;&#x4E0A;&#x7684;&#x5F02;&#x6B65;&#x6D88;&#x606F;&#x4EE3;&#x7406;&#x3002;</li>
+<li>HIPI Library - &#x4F7F;&#x7528; Hadoop &#x7684; MapReduce &#x6765;&#x6267;&#x884C;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7684;API&#x3002;</li>
+<li>Hunk - Hadoop &#x7684;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Imhotep - &#x5927;&#x578B;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Jupyter - &#x57FA;&#x4E8E;&#x7F51;&#x9875;&#x7684;&#x7528;&#x4E8E;&#x4EA4;&#x4E92;&#x8BA1;&#x7B97;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5176;&#x53EF;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x5168;&#x8FC7;&#x7A0B;&#x8BA1;&#x7B97;&#xFF1A;&#x5F00;&#x53D1;&#x3001;&#x6587;&#x6863;&#x7F16;&#x5199;&#x3001;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x548C;&#x5C55;&#x793A;&#x7ED3;&#x679C;&#x3002;</li>
+<li>MADlib - RDBMS &#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x6570;&#x636E;&#x3002;</li>
+<li>Kapacitor - &#x7528;&#x4E8E;&#x5BF9;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3001;&#x76D1;&#x89C6;&#x548C;&#x8B66;&#x62A5;&#x7684;&#x5F00;&#x6E90;&#x6846;&#x67B6;&#x3002;</li>
+<li>Kylin - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5206;&#x6790;&#x5F15;&#x64CE;&#xFF0C;&#x63D0;&#x4F9B; Hadoop/Spark &#x4E4B;&#x4E0A;&#x7684; SQL &#x67E5;&#x8BE2;&#x63A5;&#x53E3;&#x53CA;&#x591A;&#x7EF4;&#x5206;&#x6790;&#xFF08;OLAP&#xFF09;&#x80FD;&#x529B;&#x4EE5;&#x652F;&#x6301;&#x8D85;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#xFF0C;&#x6700;&#x521D;&#x7531; eBay Inc. &#x5F00;&#x53D1;&#x5E76;&#x8D21;&#x732E;&#x81F3;&#x5F00;&#x6E90;&#x793E;&#x533A;&#xFF0C;&#x80FD;&#x5728;&#x4E9A;&#x79D2;&#x5185;&#x67E5;&#x8BE2;&#x5DE8;&#x5927;&#x7684;Hive&#x8868;&#x3002;</li>
+<li>PivotalR - &#x652F;&#x6301;&#x5728; Pivotal HD / HAWQ &#x4EE5;&#x53CA; PostgreSQL &#x4E0A;&#x8FD0;&#x884C; R&#x3002;</li>
+<li>Rakam - &#x5F00;&#x6E90;&#x5B9E;&#x65F6;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x6790;&#x5E73;&#x53F0;&#xFF0C;&#x7531; Postgresql, Kinesis &#x548C; PrestoDB &#x63D0;&#x4F9B;&#x652F;&#x6301;&#x3002;</li>
+<li>Qubole - &#x80FD;&#x591F;&#x81EA;&#x52A8;&#x6269;&#x5C55; Hadoop &#x96C6;&#x7FA4;&#x4EE5;&#x53CA;&#x5185;&#x7F6E;&#x7684;&#x94FE;&#x63A5;&#x5668;&#x3002;</li>
+<li>Sense - &#x6570;&#x636E;&#x79D1;&#x5B66;&#x548C;&#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;&#x4E91;&#x5E73;&#x53F0;&#x3002;</li>
+<li>SnappyData - &#x4E00;&#x4E2A;&#x7EDF;&#x4E00; OLTP+OLAP +&#x6D41;&#x5F0F;&#x5199;&#x5165;&#x7684;&#x5185;&#x5B58;&#x5206;&#x5E03;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Snowplow - &#x7531; Hadoop&#xFF0C;Kinesis&#xFF0C;Redshift &#x548C; Postgres &#x652F;&#x6301;&#x7684;&#x4F01;&#x4E1A;&#x7EA7; Web &#x548C;&#x4E8B;&#x4EF6;&#x5206;&#x6790;&#x3002;</li>
+<li>SparkR - &#x7528;&#x4E8E; Spark &#x7684; R &#x524D;&#x7AEF;&#x3002;</li>
+<li>Splunk - &#x4E00;&#x6B3E;&#x6210;&#x719F;&#x7684;&#x5546;&#x4E1A;&#x5316;&#x65E5;&#x5FD7;&#x5904;&#x7406;&#x5206;&#x6790;&#x4EA7;&#x54C1;&#x3002;</li>
+<li>Sumo Logic - &#x57FA;&#x4E8E;&#x4E91;&#x7684;&#x65E5;&#x5FD7;&#x5904;&#x7406;&#x5206;&#x6790;&#x4EA7;&#x54C1;&#x3002;</li>
+<li>Talend - YARN&#x3001;Hadoop&#x3001;HBASE&#x3001;Hive&#x3001;HCatalog &#x548C; Pig &#x7684;&#x7EDF;&#x4E00;&#x5F00;&#x6E90;&#x73AF;&#x5883;&#x3002;</li>
+<li>Warp - &#x5927;&#x6570;&#x636E;&#x793A;&#x4F8B;&#x67E5;&#x8BE2;&#x5DE5;&#x5177;(OS X &#x5E94;&#x7528;)</li>
+</ul>
+<h3 id="&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x548C;&#x6846;&#x67B6;">&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x548C;&#x6846;&#x67B6;</h3>
+<ul>
+<li>Apache Lucene - &#x4E00;&#x5957;&#x7528;&#x4E8E;&#x5168;&#x6587;&#x68C0;&#x7D22;&#x548C;&#x641C;&#x7D22;&#x7684;&#x5F00;&#x653E;&#x6E90;&#x7801;&#x7A0B;&#x5E8F;&#x5E93;</li>
+<li>Apache Solr - &#x662F; Apache Lucene &#x9879;&#x76EE;&#x7684;&#x5F00;&#x6E90;&#x4F01;&#x4E1A;&#x641C;&#x7D22;&#x5E73;&#x53F0;&#x3002;&#x5176;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x5305;&#x62EC;&#x5168;&#x6587;&#x68C0;&#x7D22;&#x3001;&#x547D;&#x4E2D;&#x6807;&#x793A;&#x3001;&#x5206;&#x9762;&#x641C;&#x7D22;&#x3001;&#x52A8;&#x6001;&#x805A;&#x7C7B;&#x3001;&#x6570;&#x636E;&#x5E93;&#x96C6;&#x6210;&#xFF0C;&#x4EE5;&#x53CA;&#x5BCC;&#x6587;&#x672C;&#xFF08;&#x5982;Word&#x3001;PDF&#xFF09;&#x7684;&#x5904;&#x7406;&#x3002;</li>
+<li>Elassandra - &#x662F; ElasticSearch &#x7684;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#xFF0C;&#x7ECF;&#x8FC7;&#x4FEE;&#x6539;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A; Apache Cassandra &#x7684;&#x63D2;&#x4EF6;&#x8FD0;&#x884C;&#xFF0C;&#x5177;&#x6709;&#x53EF;&#x6269;&#x5C55;&#x548C;&#x7075;&#x6D3B;&#x7684;&#x70B9;&#x5BF9;&#x70B9;&#x67B6;&#x6784;&#x3002;</li>
+<li>ElasticSearch - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Lucene &#x5E93;&#x7684;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x3001;&#x652F;&#x6301;&#x591A;&#x79DF;&#x6237;&#x7684;&#x5168;&#x6587;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#xFF0C;&#x5177;&#x6709; HTTP Web &#x63A5;&#x53E3;&#x548C;&#x65E0;&#x6A21;&#x5F0F; JSON &#x6587;&#x6863;&#x3002;</li>
+<li><a href="http://Enigma.io" target="_blank">http://Enigma.io</a> &#x2013; &#x514D;&#x8D39;&#x589E;&#x503C;&#x7684; Web &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7528;&#x4E8E;&#x5BF9; Web &#x4E0A;&#x6293;&#x53D6;&#x7684;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x6D4F;&#x89C8;&#xFF0C;&#x8FC7;&#x6EE4;&#xFF0C;&#x5206;&#x6790;&#xFF0C;&#x641C;&#x7D22;&#x548C;&#x5BFC;&#x51FA;&#x3002;</li>
+<li>Facebook Unicorn - &#x793E;&#x4EA4;&#x56FE;&#x641C;&#x7D22;&#x5E73;&#x53F0;.</li>
+<li>Google Caffeine - &#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x51FA;&#x8272;&#x7684;&#x7F13;&#x5B58;&#x7C7B;&#x5E93;&#x3002;</li>
+<li>Google Percolator - &#x7531; Google &#x516C;&#x53F8;&#x5F00;&#x53D1;&#x7684;&#x3001;&#x4E3A;&#x5927;&#x6570;&#x636E;&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x589E;&#x91CF;&#x5904;&#x7406;&#x66F4;&#x65B0;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E; google &#x7F51;&#x9875;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x670D;&#x52A1;&#x3002;</li>
+<li>TeraGoogle - &#x5927;&#x578B;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x3002;</li>
+<li>HBase Coprocessor - HBase &#x7684;&#x534F;&#x5904;&#x7406;&#x5668;&#xFF0C;Percolator &#x7684;&#x5B9E;&#x73B0;&#x3002;</li>
+<li>Lily HBase Indexer - &#x4E00;&#x6B3E;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x5355;&#x7684; HBase &#x7684;&#x5185;&#x5BB9;&#x68C0;&#x7D22;&#x65B9;&#x6848;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x5728; Solr &#x4E2D;&#x5EFA;&#x7ACB; HBase &#x7684;&#x6570;&#x636E;&#x7D22;&#x5F15;&#xFF0C;&#x4ECE;&#x800C;&#x901A;&#x8FC7; Solr &#x8FDB;&#x884C;&#x6570;&#x636E;&#x68C0;&#x7D22;&#x3002;</li>
+<li>LinkedIn Bobo - &#x5B8C;&#x5168;&#x7528; Java &#x7F16;&#x5199;&#x7684; Faceted Search &#x5B9E;&#x73B0;&#xFF0C;&#x662F; Apache Lucene &#x7684;&#x6269;&#x5C55;&#x3002;</li>
+<li>LinkedIn Cleo -&#x4E00;&#x4E2A;&#x7075;&#x6D3B;&#x7684;&#x8F6F;&#x4EF6;&#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E00;&#x4E9B;&#x9884;&#x8F93;&#x5165;&#x548C;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x7684;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x3002;</li>
+<li>LinkedIn Galene - LinkedIn &#x7684;&#x641C;&#x7D22;&#x67B6;&#x6784;&#x3002;</li>
+<li>LinkedIn Zoie - &#x4E00;&#x4E2A;&#x7528; Java &#x7F16;&#x5199;&#x7684;&#x5B9E;&#x65F6;&#x641C;&#x7D22;/&#x7D22;&#x5F15;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>MG4J - MG4J (Managing Gigabytes for Java) &#x662F;&#x4E00;&#x4E2A;&#x7528; Java &#x7F16;&#x5199;&#x7684;&#x5927;&#x578B;&#x6587;&#x6863;&#x96C6;&#x5408;&#x7684;&#x5168;&#x6587;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#xFF0C;&#x5B83;&#x662F;&#x9AD8;&#x5EA6;&#x53EF;&#x5B9A;&#x5236;&#x7684;&#xFF0C;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x6700;&#x5148;&#x8FDB;&#x7684;&#x529F;&#x80FD;&#x548C;&#x65B0;&#x7684;&#x7814;&#x7A76;&#x7B97;&#x6CD5;&#x3002;</li>
+<li>Sphinx Search Server - &#x5168;&#x6587;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Vespa - &#x5728;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x8FDB;&#x884C;&#x4F4E;&#x5EF6;&#x8FDF;&#x8BA1;&#x7B97;&#x7684;&#x5F15;&#x64CE;&#x3002;&#x5B83;&#x5B58;&#x50A8;&#x548C;&#x7D22;&#x5F15;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x4FBF;&#x53EF;&#x4EE5;&#x5728;&#x670D;&#x52A1;&#x65F6;&#x6267;&#x884C;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x9009;&#x62E9;&#x548C;&#x5904;&#x7406;&#x3002;</li>
+</ul>
+<h3 id="mysql-&#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;">MySQL &#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;</h3>
+<ul>
+<li>Amazon RDS - AWS &#x7684; MySQL &#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>Drizzle - MySQL 6.0&#x7684;&#x6F14;&#x8FDB;&#x3002;</li>
+<li>Google Cloud SQL - Google &#x4E91;&#x4E2D;&#x7684; MySQL &#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>MariaDB - MySQL &#x7684;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#xFF0C;&#x91C7;&#x7528;GPL&#x6388;&#x6743;&#x8BB8;&#x53EF;&#x3002;&#x76EE;&#x7684;&#x662F;&#x5B8C;&#x5168;&#x517C;&#x5BB9; MySQL&#xFF0C;&#x5305;&#x62EC; API &#x548C;&#x547D;&#x4EE4;&#x884C;&#x3002;</li>
+<li>MySQL Cluster - &#x4F7F;&#x7528; NDB &#x96C6;&#x7FA4;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5B9E;&#x73B0; MySQL &#x96C6;&#x7FA4;&#x3002;</li>
+<li>Percona Server - MySQL &#x589E;&#x5F3A;&#x7248;&#xFF0C;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x5B83;&#x3002;</li>
+<li>ProxySQL - MySQL &#x7684;&#x9AD8;&#x6027;&#x80FD;&#x4EE3;&#x7406;&#x3002;</li>
+<li>TokuDB - TokuDB &#x662F; MySQL &#x548C; MariaDB &#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x3002;</li>
+<li>WebScaleSQL - WebScaleSQL &#x662F; Facebook&#x3001; Google&#x3001;Twitter &#x548C; Linkedin &#x56DB;&#x5BB6;&#x516C;&#x53F8;&#x7684;MySQL &#x56E2;&#x961F;&#x53D1;&#x8D77;&#x7684; MySQL &#x5F00;&#x6E90;&#x7EC4;&#x7EC7;&#xFF0C;&#x65E8;&#x5728;&#x6539;&#x8FDB; MySQL &#x5728;&#x89C4;&#x6A21;&#x548C;&#x6027;&#x80FD;&#x7B49;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+<h3 id="postgresql-&#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;">PostgreSQL &#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;</h3>
+<ul>
+<li>HadoopDB - MapReduce &#x548C; DBMS &#x7684;&#x6DF7;&#x5408;&#x4F53;&#x3002;</li>
+<li>IBM Netezza - &#x9AD8;&#x6027;&#x80FD;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x8BBE;&#x5907;&#x3002;</li>
+<li>Postgres-XL - &#x53EF;&#x4F38;&#x7F29;&#x7684;&#x57FA;&#x4E8E; PostgreSQL &#x7684;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;&#x3002;</li>
+<li>RecDB - &#x5B8C;&#x5168;&#x5728; PostgreSQL &#x5185;&#x90E8;&#x6784;&#x5EFA;&#x7684;&#x5F00;&#x6E90;&#x63A8;&#x8350;&#x5F15;&#x64CE;&#x3002;</li>
+<li>Stado - &#x4EC5;&#x9488;&#x5BF9;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x548C;&#x6570;&#x636E;&#x96C6;&#x5E02;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5F00;&#x6E90; MPP &#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>Yahoo Everest - &#x7531; PostgreSQL &#x6D3E;&#x751F;&#x7684; PB &#x7EA7;&#x6570;&#x636E;&#x5E93;/MPP&#x3002;</li>
+<li>TimescaleDB - &#x9488;&#x5BF9;&#x5FEB;&#x901F;&#x6444;&#x53D6;&#x548C;&#x590D;&#x6742;&#x67E5;&#x8BE2;&#x800C;&#x4F18;&#x5316;&#x7684;&#x5F00;&#x6E90;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>PipelineDB - &#x5F00;&#x6E90;&#x7684;&#x6D41;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x57FA;&#x4E8E; PostgreSQL &#x6570;&#x636E;&#x5E93;&#x6539;&#x9020;&#x7684;&#xFF0C;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x901A;&#x8FC7; SQL &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x6D41;&#x505A;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x628A;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#x50A8;&#x5B58;&#x8D77;&#x6765;&#x3002;</li>
+</ul>
+<h3 id="memcached-&#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;">Memcached &#x5206;&#x652F;&#x548C;&#x6F14;&#x8FDB;</h3>
+<ul>
+<li>Facebook McDipper - &#x7528;&#x4E8E;&#x95EA;&#x5B58;&#x7684;&#x952E;/&#x503C;&#x7F13;&#x5B58;&#xFF0C;&#x8BBE;&#x8BA1;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x63D0;&#x9AD8;&#x95EA;&#x5B58;&#x5B58;&#x50A8;&#x7684;&#x4F7F;&#x7528;&#x6548;&#x7387;&#x3002;</li>
+<li>Facebook Memcached - Memcache &#x7684;&#x5206;&#x652F;&#x3002;</li>
+<li>Twemproxy - &#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x8F7B;&#x91CF;&#x7EA7;&#x7684; memcached &#x548C; redis &#x4EE3;&#x7406;&#x3002;</li>
+<li>Twitter Fatcache - &#x7528;&#x4E8E;&#x95EA;&#x5B58;&#x7684;&#x952E;/&#x503C;&#x7F13;&#x5B58;&#x3002;</li>
+<li>Twitter Twemcache - Memcache &#x7684;&#x5206;&#x652F;&#x3002;</li>
+</ul>
+<h3 id="&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x5E93;">&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x5E93;</h3>
+<ul>
+<li>Actian PSQL - &#x7531; Pervasive Software &#x5F00;&#x53D1;&#x7684;&#x7B26;&#x5408; ACID &#x7684; DBMS&#xFF0C;&#x9488;&#x5BF9;&#x5D4C;&#x5165;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#x3002;</li>
+<li>BerkeleyDB - &#x53EF;&#x4E3A;&#x952E;/&#x503C;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x3002;</li>
+<li>HanoiDB - Erlang LSM BTree &#x5B58;&#x50A8;&#x3002;</li>
+<li>LevelDB - Google &#x5F00;&#x6E90;&#x7684;&#x6301;&#x4E45;&#x5316;KV&#x5355;&#x673A;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5177;&#x6709;&#x5F88;&#x9AD8;&#x7684;&#x968F;&#x673A;&#x5199;&#xFF0C;&#x987A;&#x5E8F;&#x8BFB;/&#x5199;&#x6027;&#x80FD;&#x3002;</li>
+<li>LMDB - &#x7531; Symas &#x5F00;&#x53D1;&#x7684;&#x57FA;&#x4E8E; Btree-based &#x7684;&#x9AD8;&#x6027;&#x80FD; mmap key-value &#x6570;&#x636E;&#x5E93;</li>
+<li>RocksDB - Facebook &#x516C;&#x53F8;&#x57FA;&#x4E8E; LevelDB &#x5F00;&#x53D1;&#x7684;&#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;&#x3002;</li>
+</ul>
+<h3 id="&#x5546;&#x4E1A;&#x667A;&#x80FD;">&#x5546;&#x4E1A;&#x667A;&#x80FD;</h3>
+<ul>
+<li>BIME Analytics - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x4E91;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Blazer - &#x4F7F;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;</li>
+<li>Chartio - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#xFF0C;&#x53EF;&#x4EE5;&#x53EF;&#x89C6;&#x5316;&#x548C;&#x6D4F;&#x89C8;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>datapine - &#x81EA;&#x52A9;&#x5F0F;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5DE5;&#x5177;&#x3002;</li>
+<li>GoodData - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x548C;&#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x8F6F;&#x4EF6;&#x3002;</li>
+<li>Jaspersoft - &#x5F3A;&#x5927;&#x7684;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5957;&#x4EF6;&#x3002;</li>
+<li>Jedox Palo - &#x53EF;&#x5B9A;&#x5236;&#x7684;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;.</li>
+<li>Jethrodata - &#x4EA4;&#x4E92;&#x5F0F;&#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x3002;</li>
+<li>Metabase - &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x3001;&#x5F00;&#x6E90;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x7ED9;&#x516C;&#x53F8;&#x6210;&#x5458;&#x63D0;&#x95EE;&#xFF0C;&#x4ECE;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3001;&#x5B66;&#x4E60;&#x3002;</li>
+<li>Microsoft - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x8F6F;&#x4EF6;&#x53CA;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Microstrategy - &#x7528;&#x4E8E;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x3001;&#x79FB;&#x52A8;&#x667A;&#x80FD;&#x548C;&#x7F51;&#x7EDC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x8F6F;&#x4EF6;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Numeracy - SQL &#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x3002;</li>
+<li>Pentaho - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Qlik - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x53CA;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Redash - &#x5F00;&#x6E90;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x548C;&#x8BA1;&#x5212;&#x67E5;&#x8BE2;&#x3002;</li>
+<li>Saiku - &#x5F00;&#x6E90;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+<li>SpagoBI - &#x5F00;&#x6E90;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#x3002;</li>
+<li>SparklineData SNAP - &#x57FA;&#x4E8E; Apache Spark &#x7684;&#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Tableau - &#x5546;&#x4E1A;&#x667A;&#x80FD;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Zoomdata - &#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+</ul>
+<h3 id="&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;">&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;</h3>
+<ul>
+<li>Airpal - PrestoDB &#x7684; Web UI&#x3002;</li>
+<li>AnyChart - &#x4E00;&#x5957;&#x7075;&#x6D3B;&#x7684; JavaScript (HTML5) &#x5E93;&#xFF0C;&#x53EF;&#x6EE1;&#x8DB3;&#x60A8;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x9700;&#x6C42;&#x3002;</li>
+<li>Arbor - &#x4E00;&#x4E2A;&#x4F7F;&#x7528; web workers &#x548C; jQuery &#x521B;&#x5EFA;&#x7684;&#x56FE;&#x53EF;&#x89C6;&#x5316;&#x5E93;&#x3002;</li>
+<li>Banana - &#x53EF;&#x89C6;&#x5316;&#x5B58;&#x50A8;&#x5728; Solr &#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x548C;&#x5E26;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x662F; Kibana &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</li>
+<li>Bloomery - Impala &#x7684; Web UI&#x3002;</li>
+<li>Bokeh - &#x4E00;&#x4E2A; Python &#x4EA4;&#x4E92;&#x5F0F;&#x53EF;&#x89C6;&#x5316;&#x5E93;&#xFF0C;&#x652F;&#x6301;&#x73B0;&#x4EE3;&#x5316; Web &#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x63D0;&#x4F9B;&#x975E;&#x5E38;&#x5B8C;&#x7F8E;&#x7684;&#x5C55;&#x793A;&#x529F;&#x80FD;&#x3002;</li>
+<li>C3 - &#x57FA;&#x4E8E; D3 &#x7684;&#x53EF;&#x91CD;&#x7528;&#x56FE;&#x8868;&#x5E93;</li>
+<li>CartoDB - &#x5F00;&#x6E90;&#x7684;&#x4E91;&#x4E0A;&#x5730;&#x7406;&#x7A7A;&#x95F4;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5141;&#x8BB8;&#x5B58;&#x50A8;&#x548C;&#x53EF;&#x89C6;&#x5316; web &#x4E0A;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F7F;&#x7528; CartoDB &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x57FA;&#x4E8E;&#x5730;&#x56FE;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x6548;&#x679C;&#x3002;</li>
+<li>chartd - &#x54CD;&#x5E94;&#x5F0F;&#x3001;&#x89C6;&#x7F51;&#x819C;&#x517C;&#x5BB9;&#x56FE;&#x8868;&#xFF0C;&#x4EC5;&#x9700;&#x8981;&#x4E00;&#x4E2A; img &#x6807;&#x7B7E;&#x3002;</li>
+<li>Chart.js - &#x4E00;&#x5957;&#x5F00;&#x6E90;&#x3001;&#x7B80;&#x5355;&#x3001;&#x5E72;&#x51C0;&#x5E76;&#x4E14;&#x6709;&#x5438;&#x5F15;&#x529B;&#x7684;&#x57FA;&#x4E8E; HTML5 &#x6280;&#x672F;&#x7684; JavaScript &#x56FE;&#x8868;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Chartist.js - &#x975E;&#x5E38;&#x7B80;&#x5355;&#x800C;&#x4E14;&#x5B9E;&#x7528;&#x7684; JavaScript &#x524D;&#x7AEF;&#x56FE;&#x8868;&#x751F;&#x6210;&#x5668;&#x3002;</li>
+<li>Crossfilter - &#x4E00;&#x4E2A; JavaScript &#x5E93;&#xFF0C;&#x7528;&#x4E8E;&#x5728; JavaScript &#x4E2D;&#x5236;&#x4F5C;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x4EEA;&#x8868;&#x677F;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0E; dc.js &#x3001;d3.js &#x4E00;&#x8D77;&#x5DE5;&#x4F5C;&#x3002;</li>
+<li>Cubism - &#x7528;&#x4E8E;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x53EF;&#x89C6;&#x5316;&#x7684; JavaScript &#x5E93;&#x3002;</li>
+<li>Cytoscape - &#x4E00;&#x4E2A;&#x4E13;&#x6CE8;&#x4E8E;&#x7F51;&#x7EDC;&#x53EF;&#x89C6;&#x5316;&#x548C;&#x5206;&#x6790;&#x7684;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x3002;</li>
+<li>DC.js - &#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7F51;&#x9875;&#x4F5C;&#x56FE;&#x3001;&#x751F;&#x6210;&#x4E92;&#x52A8;&#x56FE;&#x5F62;&#x7684; JavaScript &#x51FD;&#x6570;&#x5E93;&#x3002;</li>
+<li>D3 - &#x76EE;&#x524D;&#x6700;&#x6D41;&#x884C;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5E93;&#x4E4B;&#x4E00;&#xFF0C;&#x5C0F;&#x578B;&#xFF0C;&#x7075;&#x6D3B;&#xFF0C;&#x9AD8;&#x6548;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5E93;&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x548C;&#x64CD;&#x4F5C;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x6587;&#x6863;&#x3002;</li>
+<li>D3.compose - &#x7531;&#x53EF;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x7684;&#x56FE;&#x8868;&#x548C;&#x7EC4;&#x4EF6;&#x7EC4;&#x6210;&#x590D;&#x6742;&#x7684;&#x3001;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x6587;&#x4EF6;&#x3002;</li>
+<li>D3Plus - d3.js &#x7684;&#x4E00;&#x7EC4;&#x76F8;&#x5F53;&#x5F3A;&#x5927;&#x7684;&#x53EF;&#x91CD;&#x7528;&#x56FE;&#x8868;&#x548C;&#x6837;&#x5F0F;&#x3002;</li>
+<li>DevExtreme React Chart - &#x57FA;&#x4E8E;&#x9AD8;&#x6027;&#x80FD;&#x63D2;&#x4EF6;&#x7684; React &#x56FE;&#x8868;&#xFF0C;&#x7528;&#x4E8E; Bootstrap &#x548C; Material Design&#x3002;</li>
+<li>Echarts - &#x4E00;&#x6B3E;&#x7531;&#x767E;&#x5EA6;&#x524D;&#x7AEF;&#x6280;&#x672F;&#x90E8;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x57FA;&#x4E8E;Javascript &#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x56FE;&#x8868;&#x5E93;&#xFF0C;&#x63D0;&#x4F9B;&#x76F4;&#x89C2;&#xFF0C;&#x751F;&#x52A8;&#xFF0C;&#x53EF;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4E2A;&#x6027;&#x5316;&#x5B9A;&#x5236;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x56FE;&#x8868;&#x3002;</li>
+<li>Envisionjs - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E; HTML5 &#x6280;&#x672F;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5E93;</li>
+<li>FnordMetric - &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684; Web &#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5B9E;&#x65F6;&#x4EEA;&#x8868;&#x677F;&#xFF0C;&#x65B9;&#x4FBF;&#x53EF;&#x89C6;&#x5316;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;</li>
+<li>Frappe Charts - &#x4E00;&#x4E2A;&#x53D7; Github &#x542F;&#x53D1;&#x7684;&#x8F7B;&#x91CF;&#x7EA7; SVG &#x56FE;&#x8868;&#x5E93;&#xFF0C;&#x5B83;&#x4E0D;&#x4F9D;&#x8D56;&#x4EFB;&#x4F55;&#x7C7B;&#x5E93;&#x548C;&#x6846;&#x67B6;&#x3002;</li>
+<li>Freeboard - &#x8BA9;&#x7528;&#x6237;&#x521B;&#x5EFA;&#x4ED6;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6765;&#x76D1;&#x63A7;&#x7269;&#x8054;&#x7F51;&#x90E8;&#x7F72;&#x7684;&#x4EEA;&#x8868;&#x76D8;&#xFF0C;&#x8BE5;&#x4EE3;&#x7801;&#x5728; GitHub&#x4E0A;&#x514D;&#x8D39;&#x63D0;&#x4F9B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x4EEA;&#x8868;&#x677F;&#x5C55;&#x793A;&#x8DDF;&#x8E2A;&#x7A7A;&#x6C14;&#x8D28;&#x91CF;&#x3001;&#x4F4F;&#x5B85;&#x7535;&#x5668;&#x3001;&#x917F;&#x9152;&#x60C5;&#x51B5;&#x548C;&#x5B9E;&#x65F6;&#x73AF;&#x5883;&#x6761;&#x4EF6;&#x53D8;&#x5316;&#x3002;</li>
+<li>Gephi - &#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x514D;&#x8D39;&#x8DE8;&#x5E73;&#x53F0;&#x57FA;&#x4E8E; JVM &#x7684;&#x7F51;&#x7EDC;&#x5206;&#x6790;&#x9886;&#x57DF;&#x7684;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x5904;&#x7406;&#x8F6F;&#x4EF6;</li>
+<li>Google Charts - &#x4E00;&#x79CD;&#x4EA4;&#x4E92;&#x5F0F; Web &#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x6839;&#x636E;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#x521B;&#x5EFA;&#x56FE;&#x5F62;&#x56FE;&#x8868;</li>
+<li>Grafana - &#x4E00;&#x4E2A;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x5F00;&#x6E90;&#x7684;&#x5EA6;&#x91CF;&#x5206;&#x6790;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x91C7;&#x96C6;&#x7684;&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x7136;&#x540E;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x5C55;&#x793A;&#xFF0C;&#x5E76;&#x53CA;&#x65F6;&#x901A;&#x77E5;&#x3002;</li>
+<li>Graphite - &#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x7684;&#x76D1;&#x63A7;&#x7ED8;&#x56FE;&#x5DE5;&#x5177;&#x3002;</li>
+<li>Highcharts - &#x517C;&#x5BB9; IE6+&#x3001;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x79FB;&#x52A8;&#x7AEF;&#x3001;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x4E30;&#x5BCC;&#x3001;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x7684; HTML5 &#x4EA4;&#x4E92;&#x6027;&#x56FE;&#x8868;&#x5E93;&#x3002;</li>
+<li>IPython - &#x4E00;&#x79CD;&#x57FA;&#x4E8E; Python &#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x89E3;&#x91CA;&#x5668;&#x3002;&#x76F8;&#x8F83;&#x4E8E;&#x539F;&#x751F;&#x7684; Python Shell&#xFF0C;IPython &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4E3A;&#x5F3A;&#x5927;&#x7684;&#x7F16;&#x8F91;&#x548C;&#x4EA4;&#x4E92;&#x529F;&#x80FD;&#x3002;</li>
+<li>Kibana - Elasticsearch &#x7684;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x63D2;&#x4EF6;&#x3002;</li>
+<li>Lumify - &#x5F00;&#x6E90;&#x5927;&#x6570;&#x636E;&#x5206;&#x6790;&#x53EF;&#x89C6;&#x5316;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Matplotlib - Python &#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x53CA;&#x5176;&#x6570;&#x503C;&#x6570;&#x5B66;&#x6269;&#x5C55;&#x5305; NumPy &#x7684;&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;&#x754C;&#x9762;&#x3002;</li>
+<li>Metricsgraphic.js - &#x4E00;&#x4E2A;&#x5EFA;&#x7ACB;&#x5728; D3 &#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x4E3A;&#x53EF;&#x89C6;&#x5316;&#x548C;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6570;&#x636E;&#x800C;&#x4F18;&#x5316;&#x7684;&#x5E93;&#x3002;</li>
+<li>NVD3 - d3.js &#x7684;&#x56FE;&#x8868;&#x7EC4;&#x4EF6;&#x3002;</li>
+<li>Peity - &#x6E10;&#x8FDB;&#x5F0F; SVG &#x6761;&#x5F62;&#x56FE;&#xFF0C;&#x6298;&#x7EBF;&#x56FE;&#x548C;&#x997C;&#x56FE;&#x3002;</li>
+<li><a href="http://Plot.ly" target="_blank">http://Plot.ly</a> - Plotly &#x4E3A;&#x4E2A;&#x4EBA;&#x548C;&#x534F;&#x4F5C;&#x63D0;&#x4F9B;&#x5728;&#x7EBF;&#x56FE;&#x5F62;&#xFF0C;&#x5206;&#x6790;&#x548C;&#x7EDF;&#x8BA1;&#x5DE5;&#x5177;&#xFF0C;&#x4EE5;&#x53CA; Python&#xFF0C;R&#xFF0C;MATLAB&#xFF0C;Perl&#xFF0C;Julia&#xFF0C;Arduino &#x548C; REST &#x7684;&#x79D1;&#x5B66;&#x56FE;&#x5F62;&#x5E93;&#x3002;</li>
+<li>Plotly.js &#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x4EA4;&#x4E92;&#x5F0F; JavaScript &#x56FE;&#x5F62;&#x5E93;&#xFF0C;&#x5EFA;&#x7ACB;&#x5728; d3.js &#x548C; webgl &#x4E4B;&#x4E0A;&#xFF0C;&#x5E76;&#x652F;&#x6301; 20 &#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x4EA4;&#x4E92;&#x5F0F;&#x56FE;&#x8868;&#x3002;</li>
+<li>Recline - &#x7B80;&#x5355;&#x800C;&#x5F3A;&#x5927;&#x7684;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EAF; Javascript &#x548C; HTML &#x6784;&#x5EFA;&#x6570;&#x636E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>Redash - &#x67E5;&#x8BE2;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x6570;&#x636E;&#x7684;&#x5F00;&#x6E90;&#x5E73;&#x53F0;&#x3002;</li>
+<li>ReCharts - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E;React&#x7EC4;&#x4EF6;&#x7684;&#x53EF;&#x7EC4;&#x5408;&#x56FE;&#x8868;&#x5E93;&#x3002;</li>
+<li>Shiny - R &#x7684; Web &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6846;&#x67B6;&#x3002;</li>
+<li>Sigma.js - &#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x56FE;&#x5F62;&#x7ED8;&#x5236;&#x7684; JavaScript &#x5E93;&#x3002;</li>
+<li>Superset - &#x7531; Airbnb &#x5F00;&#x53D1;&#x5E76;&#x5F00;&#x6E90;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x63A2;&#x7D22;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x5E73;&#x53F0;&#xFF0C;&#x8BBE;&#x8BA1;&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x76F4;&#x89C2;&#x7684;&#xFF0C;&#x53EF;&#x89C6;&#x5316;&#x7684;&#xFF0C;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x5206;&#x6790;&#x4F53;&#x9A8C;&#x3002;</li>
+<li>Vega - &#x4E00;&#x4E2A;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x8BED;&#x6CD5;&#x3002;</li>
+<li>Zeppelin - &#x4E00;&#x4E2A;&#x57FA;&#x4E8E; Web &#x7684; notebook&#xFF0C;&#x63D0;&#x4F9B;&#x4EA4;&#x4E92;&#x6570;&#x636E;&#x5206;&#x6790;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x3002;</li>
+<li>Zing Charts - &#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684; JavaScript &#x56FE;&#x8868;&#x3002;</li>
+</ul>
+<h3 id="&#x7269;&#x8054;&#x7F51;&#x548C;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;">&#x7269;&#x8054;&#x7F51;&#x548C;&#x4F20;&#x611F;&#x5668;&#x6570;&#x636E;</h3>
+<ul>
+<li>Apache Edgent (Incubating) - &#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x6A21;&#x578B;&#x548C;&#x5177;&#x6709;&#x5FAE;&#x5185;&#x6838;&#x98CE;&#x683C;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x53EF;&#x5D4C;&#x5165;&#x5230;&#x7F51;&#x5173;&#x548C;&#x5C0F;&#x578B;&#x7684;&#x7269;&#x8054;&#x7F51;&#x8BBE;&#x5907;&#x4E2D;&#x3002;</li>
+<li>Azure IoT Hub - &#x6258;&#x7BA1;&#x670D;&#x52A1;&#xFF0C;&#x652F;&#x6301; IoT &#x8BBE;&#x5907;&#x4E0E; Azure &#x4E4B;&#x95F4;&#x7684;&#x53CC;&#x5411;&#x901A;&#x4FE1;&#x3002;</li>
+<li>TempoIQ - &#x57FA;&#x4E8E;&#x4E91;&#x8BA1;&#x7B97;&#x7684;&#x4F20;&#x611F;&#x5668;&#x5206;&#x6790;&#x3002;.</li>
+<li>2lemetry - &#x7269;&#x8054;&#x7F51;&#x5E73;&#x53F0;&#x3002;</li>
+<li>Pubnub - &#x6570;&#x636E;&#x6D41;&#x7F51;&#x7EDC;&#x3002;</li>
+<li>ThingWorx - &#x53EF;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x6570;&#x636E;&#x6765;&#x6E90;&#xFF0C;&#x4F7F;&#x6570;&#x636E;&#x4E0E;&#x60C5;&#x5883;&#x76F8;&#x5173;&#xFF0C;&#x5408;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x540C;&#x65F6;&#x534F;&#x8C03;&#x6D41;&#x7A0B;&#xFF0C;&#x4EE5;&#x63D0;&#x4F9B;&#x5F3A;&#x5927;&#x7684;Web&#x3001;&#x79FB;&#x52A8;&#x548C;AR &#x4F53;&#x9A8C;&#x7684;&#x5E73;&#x53F0;&#x3002;</li>
+<li>IFTTT - &#x4E00;&#x4E2A;&#x65B0;&#x751F;&#x7684;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5E73;&#x53F0;&#xFF0C;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x7684;&#x6761;&#x4EF6;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x3002;</li>
+<li>Evrything- &#x4F7F;&#x4EA7;&#x54C1;&#x667A;&#x80FD;&#x5316;&#x3002;</li>
+<li>NetLytics - &#x7528;&#x4E8E;&#x5728;Spark&#x4E0A;&#x5904;&#x7406;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x7684;&#x5206;&#x6790;&#x5E73;&#x53F0;&#x3002;</li>
+</ul>
+<h3 id="&#x6709;&#x8DA3;&#x7684;&#x9605;&#x8BFB;&#x6750;&#x6599;">&#x6709;&#x8DA3;&#x7684;&#x9605;&#x8BFB;&#x6750;&#x6599;</h3>
+<ul>
+<li>Big Data Benchmark - Redshift&#xFF0C;Hive&#xFF0C;Shark&#xFF0C;Impala &#x548C; Stiger/Tez&#x7684;&#x57FA;&#x51C6;&#x3002;</li>
+<li>NoSQL Comparison - Cassandra&#xFF0C;MongoDB&#xFF0C;CouchDB&#xFF0C;Redis&#xFF0C;Riak&#xFF0C;HBase&#xFF0C;Couchbase&#xFF0C;Neo4j&#xFF0C;Hypertable&#xFF0C;ElasticSearch&#xFF0C;Accumulo&#xFF0C;VoltDB &#x548C; Scalaris &#x7684;&#x6BD4;&#x8F83;&#x3002;</li>
+<li>Monitoring Kafka performance - &#x76D1;&#x89C6; Apache Kafka &#x7684;&#x6307;&#x5357;&#xFF0C;&#x5305;&#x62EC;&#x5EA6;&#x91CF;&#x6536;&#x96C6;&#x7684;&#x672C;&#x5730;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>Monitoring Hadoop performance - &#x76D1;&#x89C6; Hadoop &#x7684;&#x6307;&#x5357;&#xFF0C;&#x6982;&#x8FF0;&#x4E86; Hadoop &#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x4EE5;&#x53CA;&#x5EA6;&#x91CF;&#x6536;&#x96C6;&#x7684;&#x672C;&#x673A;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>Monitoring Cassandra performance - &#x76D1;&#x63A7; Cassandra &#x7684;&#x6307;&#x5357;&#xFF0C;&#x5305;&#x62EC;&#x5EA6;&#x91CF;&#x6536;&#x96C6;&#x7684;&#x672C;&#x5730;&#x65B9;&#x6CD5;&#x3002;</li>
+</ul>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+          <div class="book-footer">
+            
+            <div class="donate">
+              <div>『 赠我一杯咖啡☕，有更多动力继续创作』</div>
+              <button class="donate-btn" onclick="showModal()">赞赏</button>
+            </div>
+             
+            <div class="copyright"></div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="how_to_choose_bi_system.html"
+      class="
+        navigation navigation-prev
+        navigation-unique
+      "
+      aria-label="Previous page: BI系统选型"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+       
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"纷繁复杂的大数据技术栈清单","level":"4.1.2.3","depth":3,"next":{"title":"[数据仓库]","level":"4.1.3","depth":2,"ref":"","articles":[{"title":"hive默认建表存储格式","level":"4.1.3.1","depth":3,"path":"part3/hive_default_fileformat.md","ref":"part3/hive_default_fileformat.md","articles":[]}]},"previous":{"title":"BI系统选型","level":"4.1.2.2","depth":3,"path":"part3/how_to_choose_bi_system.md","ref":"part3/how_to_choose_bi_system.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeLou":{"footer":{"donate":{"button":"捐赠","avatar":"","nickname":"","message":"随意打赏","text":"『 赠我一杯咖啡☕，有更多动力继续创作』","wxpay":"static/image/wechat_pay.jpg","alipay":"static/image/alipay.jpg"},"copyright":true}}},"plugins":["-lunr","-search","search-plus","splitter","theme-lou","livereload"],"pluginsConfig":{"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"导读","copyright":{"author":"Dennis Pan"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"100 Days Of Homelab","search-placeholder":"输入关键词","imgStyle":{"isCenter":true,"isBox":false,"otherStyle":"max-width: 80%;"},"copyrightLogo":"","favicon":"static/image/favicon.ico","appleTouchIconPrecomposed152":"static/image/apple.png"},"search-plus":{},"splitter":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/bigdata_technology_stack.md","mtime":"2022-10-14T12:08:34.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T11:22:25.324Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+
