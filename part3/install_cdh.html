@@ -365,6 +365,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.1.1.7" data-path="cdh_install_livy.html">
+            
+                <a href="cdh_install_livy.html">
+            
+                    
+                    CDH6集成Livy服务 HUE支持sparksql查询
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -375,7 +388,7 @@
                 <span>
             
                     
-                    [整体架构]
+                    [系统问题思考]
             
                 </span>
             
@@ -384,38 +397,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.2.1" data-path="how_to_build_bigdata_analysis_platform.html">
+        <li class="chapter " data-level="4.1.2.1" data-path="linux_system/ntpd.html">
             
-                <a href="how_to_build_bigdata_analysis_platform.html">
-            
-                    
-                    如何整合复杂技术打造数据分析平台？
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.2.2" data-path="how_to_choose_bi_system.html">
-            
-                <a href="how_to_choose_bi_system.html">
+                <a href="linux_system/ntpd.html">
             
                     
-                    BI系统选型
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.2.3" data-path="bigdata_technology_stack.html">
-            
-                <a href="bigdata_technology_stack.html">
-            
-                    
-                    纷繁复杂的大数据技术栈清单
+                    集群时间戳不一致导致的问题及其分析和思考
             
                 </a>
             
@@ -433,6 +420,64 @@
                 <span>
             
                     
+                    [整体架构]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="how_to_build_bigdata_analysis_platform.html">
+            
+                <a href="how_to_build_bigdata_analysis_platform.html">
+            
+                    
+                    如何整合复杂技术打造数据分析平台？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="how_to_choose_bi_system.html">
+            
+                <a href="how_to_choose_bi_system.html">
+            
+                    
+                    BI系统选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="bigdata_technology_stack.html">
+            
+                <a href="bigdata_technology_stack.html">
+            
+                    
+                    纷繁复杂的大数据技术栈清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
                     [数据仓库]
             
                 </span>
@@ -442,7 +487,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.3.1" data-path="hive_default_fileformat.html">
+        <li class="chapter " data-level="4.1.4.1" data-path="hive_default_fileformat.html">
             
                 <a href="hive_default_fileformat.html">
             
@@ -513,10 +558,38 @@
     
           <section class="normal markdown-section">
              <h1 id="cdh&#x5927;&#x6570;&#x636E;&#x73AF;&#x5883;&#x5B89;&#x88C5;">CDH&#x5927;&#x6570;&#x636E;&#x73AF;&#x5883;&#x5B89;&#x88C5;</h1>
-<h2 id="&#x8D44;&#x6599;">&#x8D44;&#x6599;</h2>
+<h1 id="&#x8D44;&#x6599;">&#x8D44;&#x6599;</h1>
 <ul>
 <li><a href="http://wiki.xuwei.tech/hadoop1/cdh.html" target="_blank">CDH6.2&#x5927;&#x6570;&#x636E;&#x5E73;&#x53F0;&#x5B89;&#x88C5;&#x90E8;&#x7F72;</a></li>
 </ul>
+<h1 id="&#x907F;&#x5751;">&#x907F;&#x5751;</h1>
+<h2 id="&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;">&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;</h2>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#x6BD4;&#x8F83;&#x5B8C;&#x5584;&#x4E86;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5B89;&#x88C5;&#x597D;CDH&#xFF0C;&#x7531;&#x4E8E;&#x6211;&#x4E4B;&#x524D;&#x770B;&#x8FC7;&#x5F88;&#x591A;&#x6587;&#x7AE0;&#xFF0C;&#x4E0B;&#x8F7D;&#x8FC7;3&#x4E2A;CDH&#x7684;&#x7248;&#x672C;&#xFF1A;<code>CDH6.2.0</code>&#xFF0C;<code>CDH6.2.1</code>&#xFF0C;<code>CDH6.3.2</code>&#xFF0C;&#x5F53;&#x65F6;&#x6309;&#x7167;&#x4E0A;&#x9762;&#x6559;&#x7A0B;&#xFF0C;&#x8DF3;&#x8FC7;CDH&#x5305;&#x90A3;&#x6B65;&#xFF0C;&#x60F3;&#x4E00;&#x6B21;&#x6027;&#x5B89;&#x88C5;<code>CDH6.3.2</code>&#xFF0C;&#x7ED3;&#x679C;&#x754C;&#x9762;&#x6CA1;&#x6709;&#x663E;&#x793A;&#xFF0C;&#x540E;&#x6765;&#x5148;&#x5B89;&#x88C5;<code>CDH6.3.2</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5347;&#x7EA7;&#x4E0A;&#x53BB;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5F88;&#x591A;&#x8F6F;&#x4EF6;&#x5305;&#x5DF2;&#x7ECF;&#x5FEB;&#x5931;&#x4F20;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x5B98;&#x65B9;&#x7684;&#x65F6;&#x4E0D;&#x53EF;&#x80FD;&#x4E0B;&#x8F7D;&#x5230;&#x7684;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x8FC5;&#x96F7;&#x4E0B;&#x8F7D;&#xFF0C;&#x8FC5;&#x96F7;&#x6709;&#x955C;&#x50CF;&#x5305;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p>&#x6559;&#x7A0B;&#x4E2D;<code>&#x5B89;&#x88C5;Httpd&#x670D;&#x52A1;</code>&#x8FD9;&#x4E00;&#x6B65;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x81EA;&#x5DF1;&#x6709;NAS&#xFF0C;&#x76F4;&#x63A5;&#x5728;NAS&#x4E0A;&#x9762;&#x505A;<code>webdav</code>&#x4E0B;&#x8F7D;&#x529F;&#x80FD;&#x7684;&#xFF0C;&#x540E;&#x6765;&#x601D;&#x8003;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x8DDF;&#x6559;&#x7A0B;&#x5728;cdh01&#x8282;&#x70B9;&#x4E0A;&#x9762;&#x505A;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x540E;&#x9762;&#x66F4;&#x65B0;&#x6216;&#x8005;&#x5B89;&#x88C5;&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x7ECF;&#x5E38;&#x4F1A;&#x7528;&#x5230;&#xFF0C;&#x5EFA;&#x8BAE;&#x6709;&#x6761;&#x4EF6;&#x7684;&#x5C31;&#x5728;&#x81EA;&#x5DF1;NAS&#x4E0A;&#x9762;&#x5EFA;&#x76F8;&#x5173;&#x7684;&#x4E0B;&#x8F7D;&#x670D;&#x52A1;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;NAS&#x6761;&#x4EF6;&#x7684;&#xFF0C;&#x5EFA;&#x8BAE;&#x53E6;&#x5916;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x6216;&#x8005;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;&#x957F;&#x671F;&#x7528;&#x7684;&#x3002;</p>
+<h2 id="&#x5FEB;&#x901F;&#x521D;&#x59CB;&#x5316;&#x65B0;&#x7CFB;&#x7EDF;&#x811A;&#x672C;">&#x5FEB;&#x901F;&#x521D;&#x59CB;&#x5316;&#x65B0;&#x7CFB;&#x7EDF;&#x811A;&#x672C;</h2>
+<p>&#x521D;&#x59CB;&#x5316;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ul>
+<li>&#x66F4;&#x6362;&#x56FD;&#x5185;&#x6E90;</li>
+<li>&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#xFF0C;centos7.9&#x5176;&#x5B9E;&#x5F88;&#x8001;&#x7684;&#x4E86;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x7CFB;&#x7EDF;&#x6700;&#x597D;&#x66F4;&#x65B0;&#x4E00;&#x4E0B;</li>
+<li>&#x8BBE;&#x7F6E;&#x65F6;&#x533A;&#xFF08;&#x8BB0;&#x5F97;&#x66F4;&#x6362;&#xFF09;</li>
+<li>&#x8BBE;&#x7F6E;&#x9759;&#x6001;ip</li>
+<li>&#x5173;&#x95ED;firewalld</li>
+<li>&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x540D;</li>
+<li>&#x5173;&#x95ED;selinux</li>
+<li>&#x6539;&#x53D8;swap&#x5927;&#x5C0F; (&#x5EFA;&#x8BAE;&#x6539;&#x6210;2G&#x6216;&#x8005;&#x5173;&#x95ED;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x6709;&#x6253;&#x7B97;&#x88C5;doris&#x7684;)</li>
+<li>&#x6DFB;&#x52A0;&#x7528;&#x6237; &#xFF08;&#x53EF;&#x9009;&#xFF0C;&#x53EF;&#x540E;&#x9762;&#x64CD;&#x4F5C;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x88C5;spark&#xFF0C;&#x8981;&#x6DFB;&#x52A0;&#x65B0;&#x4E2A;&#x4EBA;&#x7528;&#x6237;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;root&#x8FDB;&#x884C;spark-submit&#xFF0C;&#x4F1A;&#x5931;&#x8D25;&#xFF09;</li>
+</ul>
+<p>&#x5FEB;&#x901F;&#x811A;&#x672C;</p>
+<ul>
+<li><a href="https://github.com/bboysoulcn/centos.git" target="_blank">centos7 &#x5FEB;&#x901F;&#x521D;&#x59CB;&#x5316;&#x811A;&#x672C;</a></li>
+<li><a href="https://gitee.com/SuperManito/LinuxMirrors" target="_blank">&#x4E00;&#x952E;&#x66F4;&#x6362;&#x56FD;&#x5185;&#x8F6F;&#x4EF6;&#x6E90;&#x811A;&#x672C;</a></li>
+</ul>
+<h2 id="mysql&#x7248;&#x672C;&#x95EE;&#x9898;">mysql&#x7248;&#x672C;&#x95EE;&#x9898;</h2>
+<p>&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x5728;NAS&#x4E0A;&#x9762;&#x90E8;&#x7F72;&#x4E86;&#x4E00;&#x4E2A;mysql8&#x548C;redash&#x67E5;&#x8BE2;&#x5DE5;&#x5177;&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x624B;&#x591A;&#x66F4;&#x6362;&#x4E86;&#x6559;&#x7A0B;&#x4E0A;&#x9762;&#x7684;mysql&#x7248;&#x672C;&#xFF0C;&#x4ECE;5.7&#x7F13;&#x5B58;8&#xFF0C;&#x7ED3;&#x679C;&#x54ED;&#x60E8;&#x4E86;&#xFF0C;&#x6570;&#x636E;&#x4E0D;&#x80FD;&#x5BFC;&#x5165;&#xFF0C;&#x8981;&#x5220;&#x9664;&#x4E86;&#xFF0C;&#x91CD;&#x65B0;&#x5B89;&#x88C5;&#x3002;&#x67E5;&#x8D44;&#x6599;&#x53D1;&#x73B0;CM&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x4E0D;&#x652F;&#x6301;mysql8&#x3002;</p>
+<h2 id="ntp&#x65F6;&#x95F4;&#x670D;&#x52A1;&#x5668;&#x95EE;&#x9898;">NTP&#x65F6;&#x95F4;&#x670D;&#x52A1;&#x5668;&#x95EE;&#x9898;</h2>
+<p>&#x8E29;&#x5751;&#x6700;&#x591A;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x53C2;&#x8003;&#x6211;<code>&#x96C6;&#x7FA4;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4E00;&#x81F4;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x5176;&#x5206;&#x6790;&#x548C;&#x601D;&#x8003;</code>&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;</p>
+<p>NTP&#x65F6;&#x95F4;&#x670D;&#x52A1;&#x6CA1;&#x6709;&#x505A;&#x597D;&#xFF0C;&#x540E;&#x671F;&#x4F1A;&#x5728;CM&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x662F;&#x4E0D;&#x662F;&#x62A5;&#x670D;&#x52A1;&#x4E0D;&#x5065;&#x5EB7;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x679C;&#x7528;doris&#xFF0C;doris&#x8FD8;&#x8981;&#x8981;&#x6C42;5&#x79D2;&#x5185;&#x7684;&#x65F6;&#x5DEE;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5F00;&#x59CB;&#x6CA1;&#x6709;&#x505A;&#x597D;&#xFF0C;&#x540E;&#x671F;&#x53EA;&#x80FD;&#x6CEA;&#x6D41;&#x6EE1;&#x9762;&#x3002;</p>
  
           </section>
           
@@ -593,7 +666,7 @@
 
     var gitbook = gitbook || [];
     gitbook.push(function () {
-      gitbook.page.hasChanged({"page":{"title":"CDH大数据环境安装","level":"4.1.1.1","depth":3,"next":{"title":"CDH6.2.1部署flink 1.13","level":"4.1.1.2","depth":3,"path":"part3/cdh_deploy_flink.md","ref":"part3/cdh_deploy_flink.md","articles":[]},"previous":{"title":"[系统选型和环境部署]","level":"4.1.1","depth":2,"ref":"","articles":[{"title":"CDH大数据环境安装","level":"4.1.1.1","depth":3,"path":"part3/install_cdh.md","ref":"part3/install_cdh.md","articles":[]},{"title":"CDH6.2.1部署flink 1.13","level":"4.1.1.2","depth":3,"path":"part3/cdh_deploy_flink.md","ref":"part3/cdh_deploy_flink.md","articles":[]},{"title":"CDH集成Trino (presto)","level":"4.1.1.3","depth":3,"path":"part3/cdh_deploy_trino.md","ref":"part3/cdh_deploy_trino.md","articles":[]},{"title":"CDH6.2.1 升级 spark2.4.6版本","level":"4.1.1.4","depth":3,"path":"part3/cdh_upgrade_spark2.4.6.md","ref":"part3/cdh_upgrade_spark2.4.6.md","articles":[]},{"title":"CDH6.3.2 集成 spark-sql","level":"4.1.1.5","depth":3,"path":"part3/cdh_install_sparksql.md","ref":"part3/cdh_install_sparksql.md","articles":[]},{"title":"Ambari 2.7.3 安装","level":"4.1.1.6","depth":3,"path":"part3/install_ambari_2.7.3.md","ref":"part3/install_ambari_2.7.3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeLou":{"footer":{"donate":{"button":"捐赠","avatar":"","nickname":"","message":"随意打赏","text":"『 赠我一杯咖啡☕，有更多动力继续创作』","wxpay":"static/image/wechat_pay.jpg","alipay":"static/image/alipay.jpg"},"copyright":true}}},"plugins":["-lunr","-search","search-plus","splitter","theme-lou","livereload"],"pluginsConfig":{"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"导读","copyright":{"author":"Dennis Pan"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"100 Days Of Homelab","search-placeholder":"输入关键词","imgStyle":{"isCenter":true,"isBox":false,"otherStyle":"max-width: 80%;"},"copyrightLogo":"","favicon":"static/image/favicon.ico","appleTouchIconPrecomposed152":"static/image/apple.png"},"search-plus":{},"splitter":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/install_cdh.md","mtime":"2022-10-17T08:41:56.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-21T23:58:58.367Z"},"basePath":"..","book":{"language":""}});
+      gitbook.page.hasChanged({"page":{"title":"CDH大数据环境安装","level":"4.1.1.1","depth":3,"next":{"title":"CDH6.2.1部署flink 1.13","level":"4.1.1.2","depth":3,"path":"part3/cdh_deploy_flink.md","ref":"part3/cdh_deploy_flink.md","articles":[]},"previous":{"title":"[系统选型和环境部署]","level":"4.1.1","depth":2,"ref":"","articles":[{"title":"CDH大数据环境安装","level":"4.1.1.1","depth":3,"path":"part3/install_cdh.md","ref":"part3/install_cdh.md","articles":[]},{"title":"CDH6.2.1部署flink 1.13","level":"4.1.1.2","depth":3,"path":"part3/cdh_deploy_flink.md","ref":"part3/cdh_deploy_flink.md","articles":[]},{"title":"CDH集成Trino (presto)","level":"4.1.1.3","depth":3,"path":"part3/cdh_deploy_trino.md","ref":"part3/cdh_deploy_trino.md","articles":[]},{"title":"CDH6.2.1 升级 spark2.4.6版本","level":"4.1.1.4","depth":3,"path":"part3/cdh_upgrade_spark2.4.6.md","ref":"part3/cdh_upgrade_spark2.4.6.md","articles":[]},{"title":"CDH6.3.2 集成 spark-sql","level":"4.1.1.5","depth":3,"path":"part3/cdh_install_sparksql.md","ref":"part3/cdh_install_sparksql.md","articles":[]},{"title":"Ambari 2.7.3 安装","level":"4.1.1.6","depth":3,"path":"part3/install_ambari_2.7.3.md","ref":"part3/install_ambari_2.7.3.md","articles":[]},{"title":"CDH6集成Livy服务 HUE支持sparksql查询","level":"4.1.1.7","depth":3,"path":"part3/cdh_install_livy.md","ref":"part3/cdh_install_livy.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeLou":{"footer":{"donate":{"button":"捐赠","avatar":"","nickname":"","message":"随意打赏","text":"『 赠我一杯咖啡☕，有更多动力继续创作』","wxpay":"static/image/wechat_pay.jpg","alipay":"static/image/alipay.jpg"},"copyright":true}}},"plugins":["-lunr","-search","search-plus","splitter","theme-lou"],"pluginsConfig":{"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"导读","copyright":{"author":"Dennis Pan"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"100 Days Of Homelab","search-placeholder":"输入关键词","imgStyle":{"isCenter":true,"isBox":false,"otherStyle":"max-width: 80%;"},"copyrightLogo":"","favicon":"static/image/favicon.ico","appleTouchIconPrecomposed152":"static/image/apple.png"},"search-plus":{},"splitter":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/install_cdh.md","mtime":"2022-10-22T15:07:02.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-22T15:26:31.504Z"},"basePath":"..","book":{"language":""}});
     });
   </script>
 </div>
@@ -612,10 +685,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
