@@ -224,6 +224,8 @@ systemctl restart cloudera-scm-agent
 mv hadoop-common-3.0.0-cdh6.2.1.jar commons-cli-1.4.jar flink-shaded-hadoop-3-uber-3.1.1.7.2.9.0-173-9.0.jar /opt/cloudera/parcels/FLINK/lib/flink/lib/
 
 添加完成后再重试还会报一个与Kerberos相关的错误，由于我的集群并没有开启Kerberos，所以需要到flink的配置界面中把Kerberos相关的配置删除，完后再重启就能够正常启动了。
+
+如果启动有问题，多查看/var/log/flink/下面的日志
 ```
 
 ## 8081端口冲突导致启动失败

@@ -333,3 +333,5 @@ cd /opt/trino-server-400
 - [CDH集成Trino(PrestoSQL)](https://blog.csdn.net/qaz1qaz1qaz2/article/details/119390420)
 - [从 0 到 1 学习 Presto，这一篇就够了](https://cloud.tencent.com/developer/article/1892572)
 - [认识Trino](https://blog.csdn.net/zsl2010zsl/article/details/124005540)
+- [trino权限验证开启https](https://blog.csdn.net/w8998036/article/details/121699855)
+- [初识Presto(Trino)](https://miaowenting.site/2021/03/04/%E5%88%9D%E8%AF%86Presto(Trino)/)
