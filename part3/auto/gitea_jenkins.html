@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>集群时间戳不一致导致的问题及其分析和思考 · GitBook</title>
+        <title>gitea + Jenkins自动化部署项目 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -395,9 +395,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1.2.1" data-path="ntpd.html">
+        <li class="chapter " data-level="4.1.2.1" data-path="../linux_system/ntpd.html">
             
-                <a href="ntpd.html">
+                <a href="../linux_system/ntpd.html">
             
                     
                     集群时间戳不一致导致的问题及其分析和思考
@@ -575,9 +575,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.6.1" data-path="../auto/gitea_jenkins.html">
+        <li class="chapter active" data-level="4.1.6.1" data-path="gitea_jenkins.html">
             
-                <a href="../auto/gitea_jenkins.html">
+                <a href="gitea_jenkins.html">
             
                     
                     gitea + Jenkins自动化部署项目
@@ -658,7 +658,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >集群时间戳不一致导致的问题及其分析和思考</a>
+        <a href="../.." >gitea + Jenkins自动化部署项目</a>
     </h1>
 </div>
 
@@ -671,37 +671,32 @@
     <div class="search-noresults">
     
           <section class="normal markdown-section">
-             <h1 id="&#x96C6;&#x7FA4;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4E00;&#x81F4;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x5176;&#x5206;&#x6790;&#x548C;&#x601D;&#x8003;">&#x96C6;&#x7FA4;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4E00;&#x81F4;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x5176;&#x5206;&#x6790;&#x548C;&#x601D;&#x8003;</h1>
-<h1 id="ntp">ntp</h1>
-<p>&#x5BF9;Linux&#x800C;&#x8A00;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ntp&#x6765;&#x5B9E;&#x73B0;&#x96C6;&#x7FA4;&#x7684;&#x65F6;&#x95F4;&#x540C;&#x6B65;&#x3002;</p>
-<p>&#x540C;&#x6B65;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ntpdate&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ntpd&#x670D;&#x52A1;&#x3002;</p>
-<h1 id="ntpdate">ntpdate</h1>
-<p>&#x4F7F;&#x7528;<code>ntpdate</code>&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3002;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>$ ntpdate [-nv] [NTP IP/hostname]
-$ ntpdate 192.168.0.1
-$ ntpdate time.ntp.org
-</code></pre><p><code>ntpdate</code>&#x53EA;&#x662F;&#x5F3A;&#x5236;&#x5C06;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#x8BBE;&#x7F6E;&#x4E3A;ntp&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x673A;&#x5668;cpu tick&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x79CD;&#x540C;&#x6B65;&#x6CBB;&#x6807;&#x4E0D;&#x6CBB;&#x672C;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x914D;&#x5408;cron&#x4EFB;&#x52A1;&#x6765;&#x5B9A;&#x671F;&#x540C;&#x6B65;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>3 * * * * /usr/sbin/ntpdate 172.17.1.1
-</code></pre><h1 id="ntpd">ntpd</h1>
-<p>&#x4F7F;&#x7528;<code>ntpd</code>&#x670D;&#x52A1;&#xFF0C;&#x8981;&#x597D;&#x4E8E;&#x4F7F;&#x7528;<code>ntpdate+cron</code>&#x3002;</p>
-<p><code>ntpdate</code>&#x540C;&#x6B65;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x65F6;&#x95F4;&#x7684;&#x8DF3;&#x8DC3;&#xFF0C;&#x5BF9;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x65F6;&#x95F4;&#x7684;&#x7A0B;&#x5E8F;&#x548C;&#x670D;&#x52A1;&#x4F1A;&#x9020;&#x6210;&#x5F71;&#x54CD;&#xFF0C;&#x6BD4;&#x5982;sleep&#xFF0C;timer&#x7B49;&#x3002;</p>
-<p><code>ntpd</code>&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x5728;&#x4FEE;&#x6B63;&#x65F6;&#x95F4;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x4FEE;&#x6B63;cpu tick&#x3002;</p>
-<p>&#x7406;&#x60F3;&#x7684;&#x505A;&#x6CD5;&#x4E3A;&#xFF0C;&#x5728;&#x5F00;&#x673A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;<code>ntpdate</code>&#x5F3A;&#x5236;&#x540C;&#x6B65;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x65F6;&#x5019;&#x4F7F;&#x7528;<code>ntpd</code>&#x670D;&#x52A1;&#x6765;&#x540C;&#x6B65;&#x65F6;&#x95F4;&#x3002;</p>
-<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>ntpd</code>&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x6211;&#x4FDD;&#x62A4;&#x8BBE;&#x7F6E;: &#x5982;&#x679C;&#x672C;&#x673A;&#x65F6;&#x95F4;&#x4E0E;&#x6E90;&#x65F6;&#x95F4;&#x76F8;&#x5DEE;&#x592A;&#x5927;, &#x5219;<code>ntpd</code>&#x4E0D;&#x8FD0;&#x884C;&#x3002;&#x6240;&#x4EE5;&#x65B0;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x95F4;&#x670D;&#x52A1;&#x5668;&#x4E00;&#x5B9A;&#x8981;&#x5148;&#x5229;&#x7528;<code>ntpdate</code>&#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x521D;&#x59CB;&#x65F6;&#x95F4;, &#x7136;&#x540E;&#x542F;&#x52A8;<code>ntpd</code>&#x670D;&#x52A1;&#x3002;</p>
-<p>&#x5173;&#x4E8E;<code>ntpd</code>&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x7F51;&#x4E0A;&#x5DF2;&#x7ECF;&#x6709;&#x5F88;&#x591A;&#x8D44;&#x6599;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x505A;&#x8FC7;&#x591A;&#x7684;&#x4ECB;&#x7ECD;&#x4E86;&#x3002;</p>
-<h1 id="ntpstat">ntpstat</h1>
-<p><code>ntpstat</code>&#x7528;&#x4E8E;&#x663E;&#x793A;&#x7F51;&#x7EDC;&#x65F6;&#x95F4;&#x7684;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x3002;<code>ntpstat</code>&#x4F1A;&#x7ED9;&#x51FA;&#x672C;&#x5730;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x8FD0;&#x884C;&#x7684;<code>ntpd</code>&#x7684;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x4E0E;&#x53C2;&#x8003;&#x65F6;&#x95F4;&#x6E90;&#x540C;&#x6B65;&#xFF0C;&#x5219;<code>ntpstat</code>&#x4F1A;&#x7ED9;&#x51FA;&#x8FD1;&#x4F3C;&#x7684;&#x65F6;&#x95F4;&#x7CBE;&#x5EA6;&#x3002;</p>
-<pre><code>$ ntpstat
-synchronised to NTP server (192.168.0.1) at stratum 3
-   time correct to within 43 ms
-   polling server every 1024 s
-</code></pre><p>&#x95EE;&#x9898;&#x5F15;&#x7533;
-&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x5229;&#x7528;ntp&#x6765;&#x540C;&#x6B65;&#x96C6;&#x7FA4;&#x65F6;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x662F;&#x503C;&#x7684;&#x601D;&#x8003;&#x7684;&#xFF1A;&#x5982;&#x4F55;&#x5728;&#x96C6;&#x7FA4;&#x65F6;&#x949F;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x89E3;&#x51B3;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4E00;&#x81F4;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#x4E00;&#x8282;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
-<p>&#x7CFB;&#x7EDF;&#x5728;&#x67B6;&#x6784;&#x4E0A;&#x8981;&#x505A;&#x4F55;&#x79CD;&#x4F18;&#x5316;&#xFF0C;&#x624D;&#x80FD;&#x907F;&#x514D;&#x4E1A;&#x52A1;&#x5BF9;&#x96C6;&#x7FA4;&#x65F6;&#x949F;&#x540C;&#x6B65;&#x7684;&#x4F9D;&#x8D56;&#xFF1F;&#x800C;&#x8FD9;&#x79CD;&#x4F18;&#x5316;&#x6240;&#x5E26;&#x6765;&#x7684;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x548C;&#x6210;&#x672C;&#x53C8;&#x5C06;&#x5982;&#x4F55;&#xFF1F;</p>
+             <h1 id="gitea--jenkins&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x9879;&#x76EE;">gitea + Jenkins&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x9879;&#x76EE;</h1>
+<h1 id="gitea-&#x548C;-gitlab&#x9009;&#x578B;">gitea &#x548C; gitlab&#x9009;&#x578B;</h1>
+<p>gitea &#x53EA;&#x662F; git &#x7684;&#x64CD;&#x4F5C;&#x5E93;&#x5B9E;&#x73B0;&#x642D;&#x914D;&#x4E86;&#x57FA;&#x7840; wiki &#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x5408;&#x5176;&#x4ED6;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x6216;&#x5DE5;&#x5177;&#x624D;&#x80FD;&#x63D0;&#x4F9B;&#x66F4;&#x4E13;&#x4E1A;&#x7684;&#x652F;&#x6301;&#x3002;&#x6BD4;&#x5982; cicd &#x8981; drone&#x3002;Gitea &#x529F;&#x80FD;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x770B;&#x4F60;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#x5982;&#x679C;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x5B58;&#x5B58;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x505A; CI/CD &#x662F;&#x8DB3;&#x591F;&#x7684;&#xFF0C;&#x5F88;&#x591A;&#x9644;&#x52A0;&#x529F;&#x80FD;&#x5904;&#x4E8E;&#x7F3A;&#x5931;&#x72B6;&#x6001;&#xFF0C;&#x9700;&#x8981;&#x5927;&#x91CF;&#x4F9D;&#x8D56;&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;&#x3002;</p>
+<p>Gitlab &#x662F;&#x5B8C;&#x6574;&#x7684; git &#x96C6;&#x6210;&#x73AF;&#x5883;&#xFF0C;&#x5305;&#x542B; npm&#xFF0C;nuget&#xFF0C;docker registry &#x7B49;&#x79C1;&#x6709;&#x96C6;&#x6210;&#xFF0C;&#x8FD8;&#x6709;&#x5B8C;&#x6574;&#x7684; CI/CD&#xFF0C;k8s &#x96C6;&#x6210;&#x65B9;&#x6848;&#x3002;Gitlab &#x9700;&#x8981;&#x7684;&#x673A;&#x5668;&#x6700;&#x4F4E;&#x914D;&#x7F6E;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x529F;&#x80FD;&#x4E5F;&#x591A;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4EE3;&#x7801; Review &#x3001;&#x91CD;&#x5EA6;&#x4F7F;&#x7528; issue &#x529F;&#x80FD;&#x3001;&#x4F7F;&#x7528; Gitlab &#x7BA1;&#x7406;&#x9879;&#x76EE;&#x5C31;&#x6BD4;&#x8F83;&#x5408;&#x9002;&#x3002;</p>
+<p>&#x51B3;&#x5B9A;&#x6027;&#x56E0;&#x7D20;&#xFF1A;&#x5BF9;&#x4E8E;&#x8BA1;&#x7B97;&#x673A;&#x8D44;&#x6E90;&#x7684;&#x5360;&#x7528;&#xFF0C;gitlab&#x660E;&#x663E;&#x5C31;&#x662F;&#x4E00;&#x76F4;&#x8D85;&#x7EA7;&#x602A;&#x517D;&#xFF0C;&#x800C;&#x6211;&#x7684;truenas&#x7CFB;&#x7EDF;&#x53EA;&#x6709;32g&#xFF0C;&#x9009;&#x62E9;&#x5C0F;&#x578B;&#x5316;&#x53C8;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x7684;gitea&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h1 id="jenkins&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;">Jenkins&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;</h1>
+<p>&#x597D;&#x5904;&#xFF1A;&#x81EA;&#x52A8;&#x5316;&#xFF0C;&#x5F00;&#x53D1;&#x8005;push&#x4EE3;&#x7801;&#x4E4B;&#x540E;&#xFF0C;&#x5168;&#x81EA;&#x52A8;&#x7F16;&#x8BD1;&#xFF0C;&#x6253;&#x5305;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x907F;&#x514D;&#x4EBA;&#x4E3A;&#x51FA;&#x9519;&#x3002;
+&#x574F;&#x5904;&#xFF1A;&#x770B;&#x9879;&#x76EE;&#x5927;&#x5C0F;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5360;&#x7528;&#x8BA1;&#x7B97;&#x673A;&#x8D44;&#x6E90;&#xFF0C;&#x9650;&#x5236;&#x597D;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x3002;&#x82B1;&#x70B9;&#x65F6;&#x95F4;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x3002;</p>
+<h2 id="jenkins&#x53D1;&#x5E03;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;">Jenkins&#x53D1;&#x5E03;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;</h2>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>source files &#x5C31;&#x662F;&#x51C6;&#x5907;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7684;workspace&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;$JENKINS_HOME/workspace/xxxx/ &#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#x90FD;&#x4F1A;&#x5728;build&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x521B;&#x5EFA;worksapce</p>
+<p>&#x6BD4;&#x5982;&#x6211;&#x8981;&#x4E0A;&#x4F20;</p>
+<p>$JENKINS_HOME/workspace/xxxx/target/class/helloworld1.java</p>
+<p>$JENKINS_HOME/workspace/xxxx/target/class/helloworld2.java </p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#x53C2;&#x6570;</p>
+<p>source files=target/class/*.java</p>
+<p>remove prefix = target (remove prefix&#x5FC5;&#x987B;&#x662F;source files&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5199;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x628A;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C42;&#x7EA7;&#x90FD;&#x4E0A;&#x4F20;&#xFF0C;&#x5982;&#x679C;&#x5199;target&#xFF0C;&#x5C31;&#x4F20;class&#x76EE;&#x5F55;&#x5C42;&#x7EA7;&#xFF0C;&#x5982;&#x679C;&#x5199;target/class &#x5C31;&#x4F20;*.java&#x6587;&#x4EF6;)</p>
+<p>remote diretory = rd (remote diretory&#x5C31;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x4E2D;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x4E2D;&#x7684;remote diretory&#x6765;&#x8BF4;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x4E2D;&#x7684;remote diretory&#x5982;&#x679C;&#x662F;&#x7A7A;&#xFF0C;&#x90A3;&#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7A7A;&#xFF0C;&#x5047;&#x5982;&#x662F;/usr/local)</p>
+<p>&#x90A3;&#x8FD9;&#x6837;&#x4E0A;&#x4F20;&#x8FC7;&#x53BB;&#xFF0C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7684;&#x76EE;&#x5F55;&#x662F;   /usr/local/rd/class/*.java</p>
+<p>&#x4E5F;&#x5C31;&#x662F;   &#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x91CC;&#x7684;remote diretory[/usr/local]+&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x7684;remote diretory[rd]+source files&#x53BB;&#x6389;remove prefix&#x7684;&#x76EE;&#x5F55;&#x5269;&#x4E0B;&#x7684;&#x90E8;&#x5206;[class/*.java]</p>
 <h1 id="&#x8D44;&#x6599;">&#x8D44;&#x6599;</h1>
 <ul>
-<li><a href="https://wangwei1237.github.io/2020/05/29/problem-caused-by-timestamp-s-difference-in-cluster-and-analysis/" target="_blank">&#x96C6;&#x7FA4;&#x65F6;&#x95F4;&#x6233;&#x4E0D;&#x4E00;&#x81F4;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x5176;&#x5206;&#x6790;&#x548C;&#x601D;&#x8003;</a></li>
-<li><a href="https://blog.csdn.net/showchi/article/details/106230110" target="_blank">&#x90A3;&#x4E9B;&#x5E74;&#x6211;&#x4EEC;&#x5FFD;&#x7565;&#x7684;&#x96C6;&#x7FA4;&#x65F6;&#x949F;&#x4E0D;&#x540C;&#x6B65;&#x95EE;&#x9898;</a></li>
+<li><a href="https://blog.csdn.net/tianmingqing0806/article/details/125408239" target="_blank">https://blog.csdn.net/tianmingqing0806/article/details/125408239</a></li>
+<li><a href="https://www.cnblogs.com/yxhblogs/p/14056752.html" target="_blank">https://www.cnblogs.com/yxhblogs/p/14056752.html</a></li>
+<li><a href="https://codeantenna.com/a/wcYUhntuqP" target="_blank">https://codeantenna.com/a/wcYUhntuqP</a></li>
+<li><a href="https://juejin.cn/post/6844903813120262158" target="_blank">https://juejin.cn/post/6844903813120262158</a></li>
 </ul>
  
           </section>
@@ -768,7 +763,7 @@ synchronised to NTP server (192.168.0.1) at stratum 3
 
     var gitbook = gitbook || [];
     gitbook.push(function () {
-      gitbook.page.hasChanged({"page":{"title":"集群时间戳不一致导致的问题及其分析和思考","level":"4.1.2.1","depth":3,"next":{"title":"[整体架构]","level":"4.1.3","depth":2,"ref":"","articles":[{"title":"如何整合复杂技术打造数据分析平台？","level":"4.1.3.1","depth":3,"path":"part3/how_to_build_bigdata_analysis_platform.md","ref":"part3/how_to_build_bigdata_analysis_platform.md","articles":[]},{"title":"BI系统选型","level":"4.1.3.2","depth":3,"path":"part3/how_to_choose_bi_system.md","ref":"part3/how_to_choose_bi_system.md","articles":[]},{"title":"纷繁复杂的大数据技术栈清单","level":"4.1.3.3","depth":3,"path":"part3/bigdata_technology_stack.md","ref":"part3/bigdata_technology_stack.md","articles":[]}]},"previous":{"title":"[系统问题思考]","level":"4.1.2","depth":2,"ref":"","articles":[{"title":"集群时间戳不一致导致的问题及其分析和思考","level":"4.1.2.1","depth":3,"path":"part3/linux_system/ntpd.md","ref":"part3/linux_system/ntpd.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeLou":{"footer":{"donate":{"button":"捐赠","avatar":"","nickname":"","message":"随意打赏","text":"『 赠我一杯咖啡☕，有更多动力继续创作』","wxpay":"static/image/wechat_pay.jpg","alipay":"static/image/alipay.jpg"},"copyright":true}}},"plugins":["-lunr","-search","search-plus","splitter","theme-lou"],"pluginsConfig":{"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"导读","copyright":{"author":"Dennis Pan"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"100 Days Of Homelab","search-placeholder":"输入关键词","imgStyle":{"isCenter":true,"isBox":false,"otherStyle":"max-width: 80%;"},"copyrightLogo":"","favicon":"static/image/favicon.ico","appleTouchIconPrecomposed152":"static/image/apple.png"},"search-plus":{},"splitter":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/linux_system/ntpd.md","mtime":"2022-10-22T03:32:05.991Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-27T04:32:58.510Z"},"basePath":"../..","book":{"language":""}});
+      gitbook.page.hasChanged({"page":{"title":"gitea + Jenkins自动化部署项目","level":"4.1.6.1","depth":3,"next":{"title":"[dolphinscheduler]","level":"4.1.6.2","depth":3,"ref":"","articles":[]},"previous":{"title":"[自动化]","level":"4.1.6","depth":2,"ref":"","articles":[{"title":"gitea + Jenkins自动化部署项目","level":"4.1.6.1","depth":3,"path":"part3/auto/gitea_jenkins.md","ref":"part3/auto/gitea_jenkins.md","articles":[]},{"title":"[dolphinscheduler]","level":"4.1.6.2","depth":3,"ref":"","articles":[]},{"title":"[griffin]","level":"4.1.6.3","depth":3,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeLou":{"footer":{"donate":{"button":"捐赠","avatar":"","nickname":"","message":"随意打赏","text":"『 赠我一杯咖啡☕，有更多动力继续创作』","wxpay":"static/image/wechat_pay.jpg","alipay":"static/image/alipay.jpg"},"copyright":true}}},"plugins":["-lunr","-search","search-plus","splitter","theme-lou"],"pluginsConfig":{"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#FF4848","book-anchor-title":"导读","copyright":{"author":"Dennis Pan"},"forbidCopy":true,"logo":"static/logo.png","book-summary-title":"100 Days Of Homelab","search-placeholder":"输入关键词","imgStyle":{"isCenter":true,"isBox":false,"otherStyle":"max-width: 80%;"},"copyrightLogo":"","favicon":"static/image/favicon.ico","appleTouchIconPrecomposed152":"static/image/apple.png"},"search-plus":{},"splitter":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/auto/gitea_jenkins.md","mtime":"2022-10-27T03:50:12.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-27T04:32:58.510Z"},"basePath":"../..","book":{"language":""}});
     });
   </script>
 </div>

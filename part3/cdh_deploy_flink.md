@@ -232,6 +232,17 @@ mv hadoop-common-3.0.0-cdh6.2.1.jar commons-cli-1.4.jar flink-shaded-hadoop-3-ub
 
 如果你和我一样是3节点的，检查一下CM后台flink的配置，把yarn.taskmanagers改成2（总节点数-1），因为默认值是1，导致多出来的那个节点要抢rest.port服务端口导致其中有一台机启动失败。
 
+CDH flink配置设置：
+
+flink-yarn 服务环境高级配置代码段
+
+```
+HADOOP_USER_NAME=flink
+HADOOP_CONF_DIR=/etc/hadoop/conf
+HADOOP_HOME=/opt/cloudera/parcels/CDH
+HADOOP_CLASSPATH=/opt/cloudera/parcels/CDH/jars/*
+```
+
 # 资料
 
 - [自制Flink Parcel集成CDH（Flink1.13.2 + CDH6.2.1+Scala2.11）](https://blog.csdn.net/weixin_44389063/article/details/119579087)
@@ -239,3 +250,4 @@ mv hadoop-common-3.0.0-cdh6.2.1.jar commons-cli-1.4.jar flink-shaded-hadoop-3-ub
 - https://www.modb.pro/db/133009
 - https://www.programminghunter.com/article/51042461516/
 - https://blog.csdn.net/spark9527/article/details/115767011
+- https://blog.csdn.net/u014539465/article/details/115422849
